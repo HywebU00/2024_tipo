@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>抱歉!找不到您的頁面！</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #5a53b4;
+        color: #fff;
+      }
+      .wrapper {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0px auto;
+        padding: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .wrapper .error {
+        text-align: left;
+        width: 50%;
+        font-family: sans-serif;
+      }
+      .wrapper .errorPic {
+        width: 50%;
+      }
+      .wrapper .error h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+      }
+      .wrapper .error h2 {
+        overflow: hidden;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        opacity: 0.8;
+      }
+      .wrapper .error h2 small {
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+      }
+      .btn_grp {
+        width: 100%;
+        margin: 2rem 0;
+        text-align: center;
+      }
+      .btn_grp a {
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0.5rem 1.3rem;
+        margin: 0 1rem 1rem;
+        min-width: 10rem;
+        color: #fff;
+        text-align: center;
+        border: 1px solid #fff;
+        text-decoration: none;
+        transition: 0.3s ease-out;
+      }
+      .btn_grp a:hover,
+      .btn_grp a:focus {
+        background: rgba(0, 0, 0, 0.2);
+        box-shadow: none;
+        outline: none;
+      }
+      @media screen and (max-width: 767px) {
+        .wrapper {
+          flex-direction: column;
+          padding: 3rem 1.5rem;
+        }
+        .wrapper .error {
+          width: 100%;
+        }
+        .wrapper .errorPic {
+          width: 100%;
+          margin-top: 2rem;
+        }
+        .wrapper .error h1 {
+          font-size: 2.5rem;
+          text-align: center;
+          width: 100%;
+        }
+        .wrapper .error h2 {
+          text-align: center;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="error">
+        <h1>抱歉！<br />找不到您的頁面！</h1>
+        <h2>
+          您瀏覽的網頁不存在,請再重新檢視
+          <small>The page you're visiting does not exit, please click.</small>
+        </h2>
+        <h2>
+          將在<span>2</span>秒後自動跳轉到首頁
+          <small>be redirected to homepage automatically in <span>2</span> seconds.</small>
+        </h2>
+      </div>
+      <div class="errorPic">
+        <img src="images/error.svg" alt="" />
+      </div>
+      <div class="btn_grp">
+        <a href="javascript:history.back()" class="btn">回上一頁</a>
+        <a href="#" class="btn">回首頁</a>
+      </div>
+    </div>
+  </body>
+</html>

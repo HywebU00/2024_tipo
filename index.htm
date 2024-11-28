@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>智慧局主題網</title>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .demo_wrap {
+        max-width: 1000px;
+        margin: 0em auto 1em;
+        padding: 15px 15px 3em;
+        clear: both;
+        background: #fff;
+      }
+      .demo_wrap h1 {
+        display: block;
+        margin: 0px auto;
+        max-width: 300px;
+        float: left;
+        margin-right: 1em;
+      }
+      @media screen and (max-width: 545px) {
+        .demo_wrap h1 {
+          max-width: 100%;
+          float: none;
+          text-align: center;
+        }
+      }
+      .demo_wrap h1 img {
+      }
+      .num {
+        width: 12%;
+      }
+      body {
+        counter-reset: num;
+      }
+      table {
+        margin-bottom: 1em;
+      }
+      table caption {
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.25em;
+        padding: 0.5em 0;
+        color: #ff5050;
+      }
+      thead tr th:first-child,
+      tbody tr td:first-child {
+        width: 80px;
+      }
+      tbody tr td:first-child:before {
+        counter-increment: num;
+        display: block;
+        text-align: center;
+        content: counters(num, '.') ' ';
+      }
+      tbody tr td:nth-child(2) {
+        width: 35%;
+      }
+      .btn_grp {
+        text-align: right;
+      }
+      @media screen and (max-width: 545px) {
+        .btn_grp {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo_wrap">
+      <h1><img src="images/logo.png" alt="" /></h1>
+      <div class="btn_grp">
+        <a href="https://github.com/HywebU00/hyui_flex" class="btn">切版檔案請按此下載</a>
+      </div>
+      <hr />
+
+      <div class="table_wrapper">
+        <h3>首頁</h3>
+        <table>
+          <thead>
+            <tr>
+              <th class="num">編號</th>
+              <th>頁面名稱</th>
+              <th>檔案名稱</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>首頁</td>
+              <td><a href="mp.htm"></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>(共通)節點頁</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>NP1-第二層-卡片式</td>
+              <td><a href="np1.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>NP2-第二層-節點式</td>
+              <td><a href="np2.htm"></a></td>
+            </tr>
+            <!-- <tr>
+              <td></td>
+              <td>NP3-第三層選單</td>
+              <td><a href="np3.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>NP4-第四層選單</td>
+              <td><a href="np4.htm"></a></td>
+            </tr> -->
+          </tbody>
+        </table>
+        <h3>(共通)條列頁</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>LP1-一般條列頁</td>
+              <td><a href="lp1.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>LP2-圖文條列頁</td>
+              <td><a href="lp2.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>LP3-標題條列頁</td>
+              <td><a href="lp3.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>LP4-表格條列頁</td>
+              <td><a href="lp4.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>LP5-附件下載列表頁</td>
+              <td><a href="lp5.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>LP6-相簿列表頁</td>
+              <td><a href="lp6.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>LP7-混合查詢列表頁</td>
+              <td><a href="lp7.htm"></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>(共通)內容頁</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>CP1-一般內容頁</td>
+              <td><a href="cp1.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>CP2-表格混合列表內容頁</td>
+              <td><a href="cp2.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>CP3-相簿內容頁</td>
+              <td><a href="cp3.htm"></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>(共通)其他</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>sitemap-網站地圖</td>
+              <td><a href="sitemap.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>404-錯誤畫面</td>
+              <td><a href="error.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>FAQ</td>
+              <td><a href="faq.htm"></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>SP-地圖</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>地圖頁1-東南亞</td>
+              <td><a href="map.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>地圖頁2-南亞</td>
+              <td><a href="map2.htm"></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>SP-問卷調查</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>問卷調查1-條列</td>
+              <td><a href="survey.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>問卷調查2-問卷說明</td>
+              <td><a href="survey_info.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>問卷調查3-問卷調查</td>
+              <td><a href="survey_content.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>問卷調查4-問卷統計結果</td>
+              <td><a href="survey_result.htm"></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>SP-檢警調專區</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>檢警調專區1-登入頁</td>
+              <td><a href="investigation.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>檢警調專區2-NP頁</td>
+              <td><a href="investigation_np.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>檢警調專區3-LP頁</td>
+              <td><a href="investigation_lp.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>檢警調專區4-CP頁</td>
+              <td><a href=""></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>SP-電子報</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>電子報1-電子報列表</td>
+              <td><a href="epaper_list.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>電子報2-電子報訂閱</td>
+              <td><a href="epaper_subscribe.htm"></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>edm</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>寄送版</td>
+              <td>
+                <a href="edm/ch.html "></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>寄送版 en</td>
+              <td>
+                <a href="edm/en.html "></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>寄送版訊息快遞</td>
+              <td>
+                <a href="edm/message.html "></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>網頁版</td>
+              <td>
+                <a href="edm.html"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>網頁版 en</td>
+              <td>
+                <a href="edm_en.html"></a>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>網頁版訊息快遞</td>
+              <td>
+                <a href="edm_message.html"></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>SP-主題網</h3>
+        <table>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>官網-專利主題網 EN</td>
+              <td><a href="sp_patents.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>官網-商標主題網 EN</td>
+              <td><a href="sp_trademarks.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>官網-著作權主題網 EN</td>
+              <td><a href="sp_copyright.htm"></a></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>官網-營業秘密主題網 EN</td>
+              <td><a href="sp_tradesecrets.htm"></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/customize.js"></script>
+    <script>
+      $(function () {
+        $('tbody')
+          .find('a')
+          .each(function (index, el) {
+            var Link = $(this).attr('href');
+            $(this).text(Link);
+          });
+      });
+    </script>
+  </body>
+</html>

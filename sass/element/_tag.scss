@@ -1,0 +1,63 @@
+// 文章標籤
+div.tag {
+  @extend %clearfix;
+  padding: 16px 16px 10px 16px;
+  margin-bottom: 0.5em;
+  position: relative;
+  background: #e1e1e1;
+  border-radius: 4px;
+  //   &:before {
+  //     content: '';
+  //     width: 16px;
+  //     height: 16px;
+  //     position: absolute;
+  //     left: 0;
+  //     top: 1em;
+  //     background: url(../images/basic/icon_tag.png) no-repeat center center;
+  //     background-size: 16px;
+  //   }
+  ul {
+    @include li-reset;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      margin: 0 0.2em 0.2em 0;
+      flex: 0 0 auto;
+      a {
+        display: flex;
+        align-items: center;
+        font-size: 0.9375em;
+        @include aSetting_nocolor;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        padding: 0.3em 0.8em;
+        background: #fff;
+        &::before {
+          content: '';
+          width: 5px;
+          height: 10px;
+          display: inline-block;
+          border-radius: 10px;
+          margin-right: 6px;
+          background: $primaryColor;
+        }
+        &:hover {
+          color: $primaryColor;
+        }
+        &.active {
+          background: $primaryColor;
+          color: #fff;
+          border: 1px solid $primaryColor;
+          &::before {
+            background: #fff;
+          }
+          &:hover {
+            background: $secondaryColor;
+            color: #fff;
+            border: 1px solid $secondaryColor;
+          }
+        }
+      }
+    }
+  }
+}

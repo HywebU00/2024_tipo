@@ -1,0 +1,338 @@
+.npCard {
+  margin: 0.2em 0;
+  padding: 0.5em 0 0.5em;
+  .Flex-set {
+    align-items: stretch;
+  }
+  .card {
+    width: 100%;
+    perspective: 1000px;
+    outline: none; // 移除默認的 focus 樣式，之後會自定義
+    position: relative;
+
+    &:focus-visible {
+      outline: 2px solid $aFocus; // 聚焦時卡片邊框樣式
+      .card-inner {
+        transform: rotateY(180deg); // 當卡片被 focus 時觸發翻轉
+      }
+    }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+      &:hover {
+        transform: rotateY(180deg); // 保持 hover 的翻轉效果
+      }
+    }
+
+    .card-front,
+    .card-back {
+      // position: absolute;
+      width: 100%;
+      // height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f0f0;
+      border-radius: 6px;
+      box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2);
+      padding: 2em;
+      box-sizing: border-box;
+      a {
+        text-decoration: none;
+        &:focus-visible {
+          outline: 2px solid #ff5722; // 當鏈接獲得焦點時的樣式
+        }
+      }
+    }
+    .card-front {
+      position: absolute;
+      height: 100%;
+      justify-content: center;
+      font-size: 1.875rem;
+      line-height: 160%;
+      text-align: center;
+      font-weight: bold;
+      color: $primaryColor;
+      background: url(../images/card_bg.jpg) center center no-repeat;
+      background-size: cover;
+    }
+    .title_en {
+      font-family: 'Century Gothic';
+      color: #000;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .card-back {
+      height: 100%;
+      transform: rotateY(180deg);
+      background: url(../images/card_back_bg.jpg) center center no-repeat;
+      background-size: cover;
+      justify-content: flex-start;
+      .cardTitle {
+        font-weight: bold;
+        margin-bottom: 16px;
+        text-align: center;
+        font-size: 1.75rem;
+        color: #fff;
+        a {
+          color: #fff;
+        }
+      }
+      .title_en {
+        color: #fff;
+        display: block;
+        font-size: 1.125rem;
+        font-weight: normal;
+        margin-bottom: 0.5em;
+      }
+      ul {
+        @include li-reset;
+        li {
+          margin-bottom: 4px;
+          a {
+            text-align: center;
+            display: block;
+            padding: 6px 8px;
+            background: #fff;
+            color: $color-word;
+            border-radius: 2px;
+            &:hover,
+            &:focus-visible {
+              background: #333;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    &:focus-within .card-inner {
+      transform: rotateY(180deg); // 當背面的鏈接獲得焦點時保持翻轉
+    }
+  }
+}
+.npNode {
+  position: relative;
+  @include screen('mobile') {
+    width: 100%;
+  }
+  .title1,
+  .title2,
+  .title3 {
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    font-weight: bold;
+    font-size: 1.125em;
+    @include screen('mobile') {
+      border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.8);
+      @include screen('mobile') {
+        display: none;
+      }
+    }
+  }
+  .title3 {
+    color: $color-word;
+    &::after {
+      background: $color-word;
+    }
+  }
+  .title2,
+  .title3 {
+    @include screen('mobile') {
+      display: none;
+    }
+  }
+  ul {
+    position: unset;
+    @include li-reset;
+    top: 0;
+    position: absolute;
+    width: 33.3%;
+    @include screen('mobile') {
+      width: 100%;
+      position: relative;
+    }
+  }
+  ul:nth-child(1) {
+    background: $npNodebg1;
+  }
+  ul ul {
+    background: $npNodebg2;
+  }
+  ul ul ul {
+    background: $npNodebg3;
+  }
+  ul:not(:first-child) {
+    left: 100%;
+    display: none;
+    width: 100%;
+    @include screen('mobile') {
+      left: 0;
+    }
+  }
+  li {
+    padding: 0 20px;
+    @include screen('mobile') {
+      padding: 0;
+    }
+    a {
+      display: block;
+      padding: 16px 20px 16px 0;
+      color: #fff;
+      position: relative;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+      @include screen('mobile') {
+        padding: 16px 40px 16px 20px;
+      }
+    }
+    &.hasChild {
+      & > a {
+        &::before {
+          content: '';
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          right: 4px;
+          top: 50%;
+          margin-top: -5px;
+          border-top: 2px solid #fff;
+          border-right: 2px solid #fff;
+          transform: rotate(45deg);
+          @include screen('mobile') {
+            right: 20px;
+            transform: rotate(135deg);
+          }
+        }
+      }
+    }
+  }
+  & > ul {
+    & > li {
+      & > a {
+      }
+      &.active {
+        background: $npNodebg2;
+        @include screen('mobile') {
+          background: $npNodebg1;
+        }
+      }
+      & > ul {
+        & > li {
+          & > a {
+          }
+          &.active {
+            background: $npNodebg3;
+            @include screen('mobile') {
+              background: $npNodebg2;
+            }
+            & > a {
+              color: $color-word;
+              @include screen('mobile') {
+                color: #fff;
+              }
+              &::before {
+                border-top: 2px solid $color-word;
+                border-right: 2px solid $color-word;
+                @include screen('mobile') {
+                  border-top: 2px solid #fff;
+                  border-right: 2px solid #fff;
+                }
+              }
+            }
+          }
+          & > ul {
+            & > li {
+              & > a {
+                color: $color-word;
+                &.active {
+                  background: $npNodebg3;
+                  @include screen('mobile') {
+                    background: $npNodebg2;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  li.hasChild > a {
+    // color: orange;
+  }
+  li.active > a {
+    // color: red;
+  }
+  li.active > ul {
+    display: block;
+  }
+}
+
+.submenu {
+  ul,
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    gap: 20px;
+  }
+  li {
+    display: block;
+    width: calc(50% - 10px);
+    //margin: 0 2% 1.2em 0;
+    box-sizing: border-box;
+    @include screen('tablet') {
+    }
+    @include screen('mobile') {
+      float: none;
+      width: 100%;
+    }
+    a {
+      // border-radius:4px;
+      border: 2px solid #115d9c;
+      padding: 1em 1em 1em 2.5em;
+      display: block;
+      @include text-overflow;
+      position: relative;
+      background: url(../images/card_bg.jpg) center bottom no-repeat;
+      background-size: cover;
+      border-radius: 5px;
+      color: $color-word;
+
+      .num {
+        position: absolute;
+        width: 1em;
+        top: 1em;
+        left: 1em;
+        text-align: right;
+        &:after {
+          content: '.';
+          display: inline-block;
+        }
+      }
+      &:hover,
+      &:focus {
+        border: 2px solid #3478bc;
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+footer {
+  box-sizing: border-box;
+  @include clearfix;
+  text-align: left;
+  font-size: 1rem;
+  padding: 50px 0;
+  background-color: $fatfooterBgColor;
+  color: #a6a6a6;
+  border-top: 1px solid #7d7d7d;
+
+  @include screen('tablet') {
+    padding-top: 30px;
+  }
+  .container {
+    @include gutter;
+    max-width: 1200px;
+    > div {
+      //padding-bottom: 1em;
+    }
+    display: flex;
+    @include screen('tablet') {
+      flex-wrap: wrap;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: $primaryColor;
+    &:hover,
+    &:focus {
+      color: darken($primaryColor, 10);
+    }
+  }
+  .footer_logo {
+    flex: 0 1 240px;
+  }
+  .footer_info {
+    flex: 1 1 auto;
+  }
+  .footer_icon {
+    flex: 0 0 250px;
+    @include screen('tablet') {
+      margin-top: 20px;
+      flex: 1 1 100%;
+    }
+  }
+  // 版權連結
+  .footer_link {
+    @include li-reset();
+    @include clearfix();
+    display: flex;
+    @include screen('mobile') {
+      flex-direction: column;
+    }
+    li {
+      position: relative;
+      flex: 0 1 auto;
+      display: flex;
+      margin: 0px 8px 8px 0px;
+      &::after {
+        content: '|';
+        display: block;
+      }
+      &:last-of-type {
+        &::after {
+          content: none;
+        }
+      }
+      @include screen('mobile') {
+        flex: 1 1 100%;
+      }
+      a {
+        display: block;
+        padding-right: 8px;
+        color: #a6a6a6;
+        text-align: center;
+        transition: all 0.3s ease-out;
+        &:hover,
+        &:focus {
+          color: #fff;
+        }
+      }
+    }
+  }
+  p {
+    margin: 0;
+    a {
+      color: #a6a6a6;
+      display: inline-block;
+      padding: 0 5px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  .update,
+  .counter {
+    display: inline-block;
+    margin-right: 5px;
+    em {
+      font-style: normal;
+      color: $primaryColor;
+      padding: 0 0.5em;
+    }
+  }
+  .footer_icon {
+    a {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      &:focus {
+        &:after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          box-shadow: 0px 0px 0px 1px $aHover inset;
+          z-index: 99;
+        }
+      }
+    }
+    img {
+      max-width: 120px;
+    }
+  }
+}

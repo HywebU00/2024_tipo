@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LP1-一般條列頁</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#aC" tabindex="1">按Enter到主內容區</a>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+      <!-- header Start -->
+      <header class="header">
+        <div class="container">
+          <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+          <button type="button" class="sidebarCtrl tabletUse">側欄選單</button>
+          <!-- navigation End -->
+          <h1>
+            <a href="index.htm"><img src="images/logo.png" alt="網站標題" /></a>
+          </h1>
+
+          <div class="quickLink">
+            <ul>
+              <li><button type="button" class="talent">專利</button></li>
+              <li><button type="button" class="trademark">商標</button></li>
+              <li><button type="button" class="copyright">著作權</button></li>
+              <li><button type="button" class="tradeSecret">營業秘密</button></li>
+            </ul>
+          </div>
+          <!-- navigation Start -->
+          <nav class="navigation" role="navigation" aria-label="Site">
+            <div class="menuSiteMap">
+              <button type="button" title="網站導覽">網站導覽</button>
+            </div>
+            <!-- language -->
+            <div class="language">
+              <a href="#">EN</a>
+            </div>
+          </nav>
+          <!-- Search Start -->
+          <div class="search" role="search">
+            <div class="form_grp">
+              <label for="mustSameAsId">搜尋</label>
+              <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" accesskey="S" title="請輸入文字" aria-label="搜尋網站內容" />
+              <input name="" type="submit" value="查詢" class="btn btn-search" />
+              <div class="btn_grp">
+                <input name="" type="submit" value="進階搜尋" class="btn" />
+              </div>
+            </div>
+            <div class="keywordHot">
+              <ul>
+                <li><a href="#">熱門熱門</a></li>
+                <li><a href="#">查詢</a></li>
+                <li><a href="#">字詞三</a></li>
+              </ul>
+            </div>
+            <button class="btn searchClose" type="button" value="關閉">關閉</button>
+          </div>
+          <button type="button" class="searchCtrl tabletUse">查詢</button>
+          <button type="button" class="searchCtrl">查詢</button>
+          <button type="button" class="sidebarCtrl">側欄選單</button>
+          <!-- Search End -->
+          <!-- noscript -->
+          <noscript>
+            您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+            <a href="#">網站導覽</a>
+          </noscript>
+          <!-- menu Start -->
+          <nav class="menu" role="navigation" aria-label="Header的導航列">
+            <ul>
+              <li>
+                <a href="#">第一層選單</a>
+                <ul>
+                  <li><a href="#">第二層選單</a></li>
+                  <li><a href="#">第二層選單</a></li>
+                  <li><a href="#">第二層選單</a></li>
+                  <li><a href="#">第二層選單</a></li>
+                </ul>
+              </li>
+              <li><a href="http://www.google.com">第一層有連結</a></li>
+              <li>
+                <a href="http://www.google.com">第一層有連結</a>
+                <ul>
+                  <li><a href="http://www.google.com">第二層有連結</a></li>
+                  <li><a href="#">第二層選單</a></li>
+                  <li><a href="#">第二層選單</a></li>
+                  <li><a href="#">第二層選單</a></li>
+                  <li><a href="#">第二層選單</a></li>
+                  <li><a href="#">第二層選單</a></li>
+                  <li><a href="#">第二層選單</a></li>
+                  <li><a href="#">第二層選單</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">第一層選單</a>
+                <ul>
+                  <li><a href="#">第二層選單</a></li>
+                  <li><a href="#">第二層選單</a></li>
+                  <li>
+                    <a href="http://www.google.com">第二層有連結</a>
+                    <ul>
+                      <li>
+                        <a href="http://www.google.com">第三層選單有下層</a>
+                        <ul>
+                          <li><a href="#">第四層選單</a></li>
+                          <li><a href="#">第四層選單</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="http://www.google.com">第三層選單有連結</a></li>
+                      <li><a href="#">第三層選單</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">第二層選單</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">第一層選單</a>
+                <ul>
+                  <li><a href="#">第二層選單</a></li>
+                  <li><a href="#">第二層選單</a></li>
+                  <li>
+                    <a href="#">第二層選單</a>
+                    <ul>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li><a href="#">第二層選單</a></li>
+                      <li>
+                        <a href="#">第二層選單</a>
+                        <ul>
+                          <li><a href="#">第二層選單</a></li>
+                          <li><a href="#">第二層選單</a></li>
+                          <li><a href="#">第二層選單</a></li>
+                          <li><a href="#">第二層選單</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="#">第二層選單</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">第一層選單</a>
+                <ul>
+                  <li><a href="#">第二層選單</a></li>
+                  <li><a href="#">第二層選單</a></li>
+                  <li>
+                    <a href="http://www.google.com">第二層有連結</a>
+                    <ul>
+                      <li>
+                        <a href="http://www.google.com">第三層選單有下層</a>
+                        <ul>
+                          <li><a href="#">第四層選單</a></li>
+                          <li><a href="#">第四層選單</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="http://www.google.com">第三層選單有連結</a></li>
+                      <li><a href="#">第三層選單</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">第二層選單</a></li>
+                </ul>
+              </li>
+            </ul>
+            <button type="button" class="menuClose">關閉</button>
+          </nav>
+          <!-- menu End -->
+        </div>
+        <div class="mobileQuickLink">
+          <ul>
+            <li><button type="button" class="talent">專利</button></li>
+            <li><button type="button" class="trademark">商標</button></li>
+            <li><button type="button" class="copyright">著作權</button></li>
+            <li><button type="button" class="tradeSecret">營業秘密</button></li>
+          </ul>
+        </div>
+        <div class="subquick talent">
+          <div class="link_box">
+            <h2><span>Patents</span>專利</h2>
+            <ul>
+              <li>
+                認識專利
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/np-670-101.html" target="_blank" title="專利簡介(另開新視窗)">專利簡介</a></li>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/lp-783-101-xCat-02.html" target="_blank" title="專利類型(另開新視窗)">專利類型</a></li>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/np-674-101.html" target="_blank" title="專利法規(另開新視窗)">專利法規</a></li>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/lp-783-101-xCat-08.html" target="_blank" title="優先權(另開新視窗)">優先權</a></li>
+                </ul>
+              </li>
+              <li>
+                申請專利
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/lp-714-101.html" target="_blank" title="專利申請流程(另開新視窗)">專利申請流程</a></li>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/lp-705-101.html" target="_blank" title="專利檢索(另開新視窗)">專利檢索</a></li>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/np-703-101.html" target="_blank" title="申請表格(另開新視窗)">申請表格</a></li>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/cp-707-870831-4d63a-101.html" target="_blank" title="費用標準(另開新視窗)">費用標準</a></li>
+                </ul>
+              </li>
+              <li>
+                管理專利
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/cp-733-887342-8fe8f-101.html" target="_blank" title="專利年費(另開新視窗)">專利年費</a></li>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/lp-783-101-xCat-05.html" target="_blank" title="申請變更事項(另開新視窗)">申請變更事項</a></li>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/lp-783-101-xCat-21.html" target="_blank" title="專利權異動(另開新視窗)">專利權異動</a></li>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/lp-783-101-xCat-25.html" target="_blank" title="專利權侵害與救濟(另開新視窗)">專利權侵害與救濟</a></li>
+                </ul>
+              </li>
+              <li>
+                工具資源
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/np-737-101.html" target="_blank" title="專利判決(另開新視窗)">專利判決</a></li>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/sp-ipcq-full-101.html" target="_blank" title="國際專利分類(另開新視窗)">國際專利分類</a></li>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/lp-777-101.html" target="_blank" title="相關網站(另開新視窗)">相關網站</a></li>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/np-778-101.html" target="_blank" title="承辦人員分機(另開新視窗)">承辦人員分機</a></li>
+                </ul>
+              </li>
+              <li>
+                快速連結
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/np-704-101.html" target="_blank" title="線上申請(另開新視窗)">線上申請</a></li>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/np-774-101.html" target="_blank" title="專利FAQ(另開新視窗)">專利FAQ</a></li>
+                  <li><a href="https://www.tipo.gov.tw/patents-tw/np-763-101.html" target="_blank" title="舉發案件聽證專區(另開新視窗)">舉發案件聽證專區</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <p><a class="more" href="https://www.tipo.gov.tw/patents-tw/mp-101.html" target="_blank" title="專利主題網(另開新視窗)">進入專利主題網</a></p>
+          </div>
+          <button type="button" class="subquickClose">關閉</button>
+        </div>
+        <div class="subquick trademark">
+          <div class="link_box">
+            <h2><span>Trademarks</span>商標</h2>
+            <ul>
+              <li>
+                商標入門
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/np-506-201.html" target="_blank" title="商標型態(另開新視窗)">商標型態</a></li>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/np-507-201.html" target="_blank" title="註冊種類(另開新視窗)">註冊種類</a></li>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/np-510-201.html" target="_blank" title="商標法規(另開新視窗)">商標法規</a></li>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/lp-509-201.html" target="_blank" title="懶人包(另開新視窗)">懶人包</a></li>
+                </ul>
+              </li>
+              <li>
+                取得商標
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/cp-509-802503-f74d0-201.html" target="_blank" title="申請流程(另開新視窗)">申請流程</a></li>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/np-533-201.html" target="_blank" title="申請書表(另開新視窗)">申請書表</a></li>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/np-538-201.html" target="_blank" title="商品及服務資訊(另開新視窗)">商品及服務資訊</a></li>
+                  <li><a href="https://twtmsearch.tipo.gov.tw/OS0/OS0101.jsp" target="_blank" title="商標檢索(另開新視窗)">商標檢索</a></li>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/np-530-201.html" target="_blank" title="處理時限(另開新視窗)">處理時限</a></li>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/np-537-201.html" target="_blank" title="商標規費(另開新視窗)">商標規費</a></li>
+                </ul>
+              </li>
+              <li>
+                管理商標
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/np-649-201.html" target="_blank" title="商標延展(另開新視窗)">商標延展</a></li>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/np-552-201.html" target="_blank" title="商標異動(另開新視窗)">商標異動</a></li>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/np-557-201.html" target="_blank" title="商標爭議(另開新視窗)">商標爭議</a></li>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/np-562-201.html" target="_blank" title="判決與案例(另開新視窗)">判決與案例</a></li>
+                </ul>
+              </li>
+              <li>
+                工具資源
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/lp-606-201.html" target="_blank" title="相關網站(另開新視窗)">相關網站</a></li>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/lp-608-201.html" target="_blank" title="代理人資訊(另開新視窗)">代理人資訊</a></li>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/lp-609-201.html" target="_blank" title="商標諮詢窗口(另開新視窗)">商標諮詢窗口</a></li>
+                </ul>
+              </li>
+              <li>
+                快速連結
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/lp-508-201.html" target="_blank" title="商標FAQ(另開新視窗)">商標FAQ</a></li>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/lp-584-201.html" target="_blank" title="商標重要公告(另開新視窗)">商標重要公告</a></li>
+                  <li><a href="https://www.tipo.gov.tw/tw/np-165-1.html" target="_blank" title="統計專區(另開新視窗)">統計專區</a></li>
+                  <li><a href="https://www.tipo.gov.tw/trademarks-tw/lp-987-201.html" target="_blank" title="各國商標相關資訊(另開新視窗)">各國商標相關資訊</a></li>
+                  <li><a href="https://www.tipo.gov.tw/tw/lp-938-1.html" target="_blank" title="淨零排放智財資訊(另開新視窗)">淨零排放智財資訊</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <p><a class="more" href="https://www.tipo.gov.tw/trademarks-tw/mp-201.html" target="_blank" title="連結商標主題網(另開新視窗)">進入商標主題網</a></p>
+          </div>
+          <button type="button" class="subquickClose">關閉</button>
+        </div>
+        <div class="subquick copyright">
+          <div class="link_box">
+            <h2><span>Copyright</span>著作權</h2>
+            <ul>
+              <li>
+                認識著作權
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-405-301.html" target="_blank" title="著作權介紹(另開新視窗)">著作權介紹</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-440-301.html" lang="(另開新視窗)" target="_blank" title="著作權法規(含修法專區)(另開新視窗)">著作權法規(含修法專區)</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-404-301.html" target="_blank" title="解釋資料檢索(另開新視窗)">解釋資料檢索</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-469-301.html" target="_blank" title="著作權FAQ(另開新視窗)">著作權FAQ</a></li>
+                </ul>
+              </li>
+              <li>
+                認識集體管理團體
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-454-301.html" target="_blank" title="集管團體法規介紹(另開新視窗)">集管團體法規介紹</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/cp-448-857771-cd560-301.html" target="_blank" title="集管團體基本資料(另開新視窗)">集管團體基本資料</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-450-301.html" target="_blank" title="集管團體現行使用報酬率(另開新視窗)">集管團體現行使用報酬率</a></li>
+                </ul>
+              </li>
+              <li>
+                著作權利用與授權
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-428-301.html" target="_blank" title="取得音樂授權(另開新視窗)">取得音樂授權</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-460-301.html" target="_blank" title="申請不明著作利用(另開新視窗)">申請不明著作利用</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-460-301-xCat-30.html" target="_blank" title="尋找著作財產權人公告(另開視窗)">尋找著作財產權人公告</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-422-301.html" target="_blank" title="申請爭議案件調解(另開新視窗)">申請爭議案件調解</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-421-301.html" target="_blank" title="其他著作權案件申請(另開新視窗)">其他著作權案件申請</a></li>
+                </ul>
+              </li>
+              <li>
+                資源分享
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-432-301.html" target="_blank" title="契約範本(另開新視窗)">契約範本</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-420-301.html" target="_blank" title="著作權案例(另開新視窗)">著作權案例</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-444-301.html" target="_blank" title="專題研究(另開新視窗)">專題研究</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-476-301.html" target="_blank" title="著作權多媒體宣導(另開新視窗)">著作權多媒體宣導</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-461-301.html" target="_blank" title="身心障礙族群合理使用專區(另開新視窗)">身心障礙族群合理使用專區</a></li>
+                </ul>
+              </li>
+              <li>
+                快速連結
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-434-301.html" target="_blank" title="著作權公告(另開新視窗)">著作權公告</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-435-301.html" target="_blank" title="說明會及宣導活動資訊(另開新視窗)">說明會及宣導活動資訊</a></li>
+                  <li><a href="https://tipo.ltc.tw/" target="_blank" title="音樂資訊整合查詢(另開新視窗)">音樂資訊整合查詢</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-413-301.html" target="_blank" title="電腦伴唱機說明(另開新視窗)">電腦伴唱機說明</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <p><a class="more" href="https://www.tipo.gov.tw/copyright-tw/mp-301.html" target="_blank" title="連結著作權主題網(另開新視窗)">進入著作權主題網</a></p>
+          </div>
+          <button type="button" class="subquickClose">關閉</button>
+        </div>
+        <div class="subquick tradeSecret">
+          <div class="link_box">
+            <h2><span>trade Secret</span>營業秘密</h2>
+            <ul>
+              <li>
+                認識著作權
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-405-301.html" target="_blank" title="著作權介紹(另開新視窗)">著作權介紹</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-440-301.html" lang="(另開新視窗)" target="_blank" title="著作權法規(含修法專區)(另開新視窗)">著作權法規(含修法專區)</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-404-301.html" target="_blank" title="解釋資料檢索(另開新視窗)">解釋資料檢索</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-469-301.html" target="_blank" title="著作權FAQ(另開新視窗)">著作權FAQ</a></li>
+                </ul>
+              </li>
+              <li>
+                認識集體管理團體
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-454-301.html" target="_blank" title="集管團體法規介紹(另開新視窗)">集管團體法規介紹</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/cp-448-857771-cd560-301.html" target="_blank" title="集管團體基本資料(另開新視窗)">集管團體基本資料</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-450-301.html" target="_blank" title="集管團體現行使用報酬率(另開新視窗)">集管團體現行使用報酬率</a></li>
+                </ul>
+              </li>
+              <li>
+                著作權利用與授權
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-428-301.html" target="_blank" title="取得音樂授權(另開新視窗)">取得音樂授權</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-460-301.html" target="_blank" title="申請不明著作利用(另開新視窗)">申請不明著作利用</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-460-301-xCat-30.html" target="_blank" title="尋找著作財產權人公告(另開視窗)">尋找著作財產權人公告</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-422-301.html" target="_blank" title="申請爭議案件調解(另開新視窗)">申請爭議案件調解</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-421-301.html" target="_blank" title="其他著作權案件申請(另開新視窗)">其他著作權案件申請</a></li>
+                </ul>
+              </li>
+              <li>
+                資源分享
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-432-301.html" target="_blank" title="契約範本(另開新視窗)">契約範本</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-420-301.html" target="_blank" title="著作權案例(另開新視窗)">著作權案例</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-444-301.html" target="_blank" title="專題研究(另開新視窗)">專題研究</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-476-301.html" target="_blank" title="著作權多媒體宣導(另開新視窗)">著作權多媒體宣導</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-461-301.html" target="_blank" title="身心障礙族群合理使用專區(另開新視窗)">身心障礙族群合理使用專區</a></li>
+                </ul>
+              </li>
+              <li>
+                快速連結
+                <ul>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/lp-434-301.html" target="_blank" title="著作權公告(另開新視窗)">著作權公告</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-435-301.html" target="_blank" title="說明會及宣導活動資訊(另開新視窗)">說明會及宣導活動資訊</a></li>
+                  <li><a href="https://tipo.ltc.tw/" target="_blank" title="音樂資訊整合查詢(另開新視窗)">音樂資訊整合查詢</a></li>
+                  <li><a href="https://www.tipo.gov.tw/copyright-tw/np-413-301.html" target="_blank" title="電腦伴唱機說明(另開新視窗)">電腦伴唱機說明</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <p><a class="more" href="https://www.tipo.gov.tw/copyright-tw/mp-301.html" target="_blank" title="連結著作權主題網(另開新視窗)">進入著作權主題網</a></p>
+          </div>
+
+          <button type="button" class="subquickClose">關閉</button>
+        </div>
+      </header>
+      <!-- header End -->
+      <!-- main Start -->
+      <div id="aC" class="main innerpage">
+        <a class="accesskey" href="#ac" id="ac" accesskey="C" title="主要內容區">:::</a>
+        <!-- innerBanner上方banner -->
+        <div class="innerBanner">
+          <div class="bannerTitle">主題網站</div>
+          <div class="banner">
+            <img src="images/innerbanner.jpg" alt="" />
+          </div>
+        </div>
+        <!-- 主要內容區 -->
+        <div class="center_block">
+          <!-- nodeMenu第三四層節點 -->
+          <div class="nodeMenu">
+            <ul class="node3">
+              <li><a href="">發明創作獎助辦法</a></li>
+              <li>
+                <a href="">國家發明創作獎甄選要點</a>
+                <ul class="node4">
+                  <li class="active2"><a href="">甄選要點</a></li>
+                  <li><a href="">甄選要點</a></li>
+                  <li><a href="">甄選要點</a></li>
+                  <li><a href="">甄選要點</a></li>
+                  <li><a href="">甄選要點</a></li>
+                </ul>
+              </li>
+              <li><a href="">報名資料</a></li>
+              <li><a href="">評選結果資訊</a></li>
+              <li class="active">
+                <a href="">得獎專輯</a>
+                <ul class="node4">
+                  <li class="active2">
+                    <a href="">110年 (發明獎、創作獎)</a>
+                  </li>
+                  <li><a href="">109年 (發明獎、創作獎)</a></li>
+                  <li><a href="">108年 (發明獎、創作獎)</a></li>
+                  <li><a href="">107年 (發明獎、創作獎)</a></li>
+                  <li><a href="">106年 (發明獎、創作獎)</a></li>
+                </ul>
+              </li>
+              <li><a href="">第三層選單</a></li>
+              <li><a href="">第三層選單</a></li>
+            </ul>
+          </div>
+          <!-- breadcrumb路徑 -->
+          <div class="breadcrumb">
+            <ul>
+              <li><a href="#">首頁</a></li>
+              <li><a href="#">節點</a></li>
+              <li>節點</li>
+            </ul>
+          </div>
+          <!-- 頁面標題 h2 -->
+          <h2 class="title">LP1-一般條列頁</h2>
+          <!-- function_panel -->
+          <div class="function_panel">
+            <!-- advSearch 顯示條件查詢 -->
+            <div class="advSearch">
+              <button type="button" name="顯示條件查詢/OPEN" aria-label="顯示條件查詢展開/收合" class="btn">顯示條件查詢</button>
+            </div>
+            <!-- font_size -->
+            <div class="font_size">
+              <span>字型大小：</span>
+              <!-- 英文用<span>font-size：</span> -->
+              <ul>
+                <li><a href="#" role="button" class="small">小</a></li>
+                <li><a href="#" role="button" class="medium">中</a></li>
+                <li><a href="#" role="button" class="large">大</a></li>
+              </ul>
+            </div>
+            <!-- function功能區塊 -->
+            <div class="function">
+              <ul>
+                <li class="back">
+                  <a href="javascript:history.back()">回上一頁</a>
+                </li>
+                <li class="print"><a href="#">友善列印</a></li>
+                <!-- <li class="forward"><a href="#">轉寄友人</a></li> -->
+              </ul>
+            </div>
+            <!-- 社群分享 -->
+            <div class="share">
+              <ul>
+                <li>
+                  <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_line.svg" alt="line" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS" /></a>
+                </li>
+                <li>
+                  <a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="advSearchContent">
+            <div class="content">
+              <form action="">
+                <div class="form_grid flex-form">
+                  <div class="form_grp">
+                    <label for class="form_title">標題：</label>
+                    <div class="form_content">
+                      <input name="" id="" type="text" placeholder="" title="請輸入文字" aria-label="標題" />
+                    </div>
+                  </div>
+                  <div class="form_grp">
+                    <label for class="form_title">內文：</label>
+                    <div class="form_content">
+                      <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                  </div>
+                  <div class="form_grp">
+                    <label for class="form_title">張貼日期：</label>
+                    <div class="form_content">
+                      <div class="datepick">
+                        <input name="" type="date" value="" class="calendar" placeholder="開始日期" />
+                      </div>
+                      <div class="datepick">
+                        <input name="" type="date" value="" class="calendar" placeholder="結束日期" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="btn_grp">
+                    <input name="" type="reset" value="重設" class="btn-reset" />
+                    <input name="" type="submit" value="查詢" class="btn-submit" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- LP Start -->
+          <section class="lp">
+            <!-- category -->
+            <div class="category">
+              <ul>
+                <li><a href="#" class="active">標籤1</a></li>
+                <li><a href="#">標籤2</a></li>
+                <li><a href="#">標籤3</a></li>
+                <li><a href="#">標籤4</a></li>
+                <li><a href="#">標籤5</a></li>
+                <li><a href="#">標籤6</a></li>
+                <li><a href="#">標籤7</a></li>
+                <li><a href="#">標籤8</a></li>
+                <li><a href="#">標籤9</a></li>
+                <li><a href="#">標籤10</a></li>
+              </ul>
+            </div>
+            <!-- tag標籤 -->
+            <div class="tag">
+              <ul>
+                <li><a href="#" class="active">標籤1</a></li>
+                <li><a href="#">標籤2</a></li>
+                <li><a href="#">標籤3</a></li>
+                <li><a href="#">標籤4</a></li>
+                <li><a href="#">標籤5</a></li>
+                <li><a href="#">標籤6</a></li>
+                <li><a href="#">標籤7</a></li>
+                <li><a href="#">標籤8</a></li>
+                <li><a href="#">標籤9</a></li>
+                <li><a href="#">標籤10</a></li>
+              </ul>
+            </div>
+            <p class="applyP">
+              若有相關專利申請問題，請電
+              <a href="tel:+886281769009">(02)8176-9009</a>，或 mail 至 <a href="mailto:ipopap@tipo.gov.tw">ipopap@tipo.gov.tw</a>, <a href="mailto:hotline@tipo.gov.tw">hotline@tipo.gov.tw</a> 洽詢
+            </p>
+            <!-- 文字列表 -->
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="#">
+                    <span class="num">1</span>
+                    <div class="listTitle">
+                      「生成式AI面臨著作權議題之產業因應實務研討會」 圓滿辦理完竣「生成式AI面臨著作權議題之產業因應實務研討會」 圓滿辦理完竣「生成式AI面臨著作權議題之產業因應實務研討會」 圓滿辦理完竣「生成式AI面臨著作權議題之產業因應實務研討會」
+                      圓滿辦理完竣「生成式AI面臨著作權議題之產業因應實務研討會」 圓滿辦理完竣
+                    </div>
+                    <time>2018-03-09</time>
+                    <span class="listDept">就養養護處</span>
+                    <div class="listText">
+                      為進一步了解國內外產業實務界針對AI與著作權議題之因應對策及促進公眾意見交流，經濟部智慧財產局於113年7月5日在臺灣大學法律學院霖澤館舉辦「生成式AI面臨著作權議題之產業因應實務研討會」，邀請著作權專家學者章忠信助理教授、賴文智律師、國科會大型語言模型訓練組蔡宗翰召集人以及台灣微軟楊千旻法務協為進一步了解國內外產業實務界針對AI與著作權議題之因應對策及促進公眾意見交流，經濟部智慧財產局於113年7月5日在臺灣大學法律學院霖澤館舉辦「生成式AI面臨著作權議題之產業因應實務研討會」，邀請著作權專家學者章忠信助理教授、賴文智律師、國科會大型語言模型訓練組蔡宗翰召集人以及台灣微軟楊千旻法務協
+                      ...
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="num">1000</span>
+                    <div class="listTitle">「生成式AI面臨著作權議題之產業因應實務研討會」 圓滿辦理完竣</div>
+                    <time>2018-03-09</time>
+                    <span class="listDept">就養養護處</span>
+                    <div class="listText">
+                      為進一步了解國內外產業實務界針對AI與著作權議題之因應對策及促進公眾意見交流，經濟部智慧財產局於113年7月5日在臺灣大學法律學院霖澤館舉辦「生成式AI面臨著作權議題之產業因應實務研討會」，邀請著作權專家學者章忠信助理教授、賴文智律師、國科會大型語言模型訓練組蔡宗翰召集人以及台灣微軟楊千旻法務協
+                      ...
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="num">3</span>
+                    <div class="listTitle">「生成式AI面臨著作權議題之產業因應實務研討會」 圓滿辦理完竣</div>
+                    <time>2018-03-09</time>
+                    <span class="listDept">就養養護處</span>
+                    <div class="listText">
+                      為進一步了解國內外產業實務界針對AI與著作權議題之因應對策及促進公眾意見交流，經濟部智慧財產局於113年7月5日在臺灣大學法律學院霖澤館舉辦「生成式AI面臨著作權議題之產業因應實務研討會」，邀請著作權專家學者章忠信助理教授、賴文智律師、國科會大型語言模型訓練組蔡宗翰召集人以及台灣微軟楊千旻法務協
+                      ...
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="num">4</span>
+                    <div class="listTitle">「生成式AI面臨著作權議題之產業因應實務研討會」 圓滿辦理完竣</div>
+                    <time>2018-03-09</time>
+                    <span class="listDept">就養養護處</span>
+                    <div class="listText">
+                      為進一步了解國內外產業實務界針對AI與著作權議題之因應對策及促進公眾意見交流，經濟部智慧財產局於113年7月5日在臺灣大學法律學院霖澤館舉辦「生成式AI面臨著作權議題之產業因應實務研討會」，邀請著作權專家學者章忠信助理教授、賴文智律師、國科會大型語言模型訓練組蔡宗翰召集人以及台灣微軟楊千旻法務協
+                      ...
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="num">5</span>
+                    <div class="listTitle">「生成式AI面臨著作權議題之產業因應實務研討會」 圓滿辦理完竣</div>
+                    <time>2018-03-09</time>
+                    <span class="listDept">就養養護處</span>
+                    <div class="listText">
+                      為進一步了解國內外產業實務界針對AI與著作權議題之因應對策及促進公眾意見交流，經濟部智慧財產局於113年7月5日在臺灣大學法律學院霖澤館舉辦「生成式AI面臨著作權議題之產業因應實務研討會」，邀請著作權專家學者章忠信助理教授、賴文智律師、國科會大型語言模型訓練組蔡宗翰召集人以及台灣微軟楊千旻法務協
+                      ...
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="num">6</span>
+                    <div class="listTitle">「生成式AI面臨著作權議題之產業因應實務研討會」 圓滿辦理完竣</div>
+                    <time>2018-03-09</time>
+                    <span class="listDept">就養養護處</span>
+                    <div class="listText">
+                      為進一步了解國內外產業實務界針對AI與著作權議題之因應對策及促進公眾意見交流，經濟部智慧財產局於113年7月5日在臺灣大學法律學院霖澤館舉辦「生成式AI面臨著作權議題之產業因應實務研討會」，邀請著作權專家學者章忠信助理教授、賴文智律師、國科會大型語言模型訓練組蔡宗翰召集人以及台灣微軟楊千旻法務協
+                      ...
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="num">7</span>
+                    <div class="listTitle">「生成式AI面臨著作權議題之產業因應實務研討會」 圓滿辦理完竣</div>
+                    <time>2018-03-09</time>
+                    <span class="listDept">就養養護處</span>
+                    <div class="listText">
+                      為進一步了解國內外產業實務界針對AI與著作權議題之因應對策及促進公眾意見交流，經濟部智慧財產局於113年7月5日在臺灣大學法律學院霖澤館舉辦「生成式AI面臨著作權議題之產業因應實務研討會」，邀請著作權專家學者章忠信助理教授、賴文智律師、國科會大型語言模型訓練組蔡宗翰召集人以及台灣微軟楊千旻法務協
+                      ...
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="num">8</span>
+                    <div class="listTitle">「生成式AI面臨著作權議題之產業因應實務研討會」 圓滿辦理完竣</div>
+                    <time>2018-03-09</time>
+                    <span class="listDept">就養養護處</span>
+                    <div class="listText">
+                      為進一步了解國內外產業實務界針對AI與著作權議題之因應對策及促進公眾意見交流，經濟部智慧財產局於113年7月5日在臺灣大學法律學院霖澤館舉辦「生成式AI面臨著作權議題之產業因應實務研討會」，邀請著作權專家學者章忠信助理教授、賴文智律師、國科會大型語言模型訓練組蔡宗翰召集人以及台灣微軟楊千旻法務協
+                      ...
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="num">9</span>
+                    <div class="listTitle">「生成式AI面臨著作權議題之產業因應實務研討會」 圓滿辦理完竣</div>
+                    <time>2018-03-09</time>
+                    <span class="listDept">就養養護處</span>
+                    <div class="listText">
+                      為進一步了解國內外產業實務界針對AI與著作權議題之因應對策及促進公眾意見交流，經濟部智慧財產局於113年7月5日在臺灣大學法律學院霖澤館舉辦「生成式AI面臨著作權議題之產業因應實務研討會」，邀請著作權專家學者章忠信助理教授、賴文智律師、國科會大型語言模型訓練組蔡宗翰召集人以及台灣微軟楊千旻法務協
+                      ...
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="num">10</span>
+                    <div class="listTitle">「生成式AI面臨著作權議題之產業因應實務研討會」 圓滿辦理完竣</div>
+                    <time>2018-03-09</time>
+                    <span class="listDept">就養養護處</span>
+                    <div class="listText">
+                      為進一步了解國內外產業實務界針對AI與著作權議題之因應對策及促進公眾意見交流，經濟部智慧財產局於113年7月5日在臺灣大學法律學院霖澤館舉辦「生成式AI面臨著作權議題之產業因應實務研討會」，邀請著作權專家學者章忠信助理教授、賴文智律師、國科會大型語言模型訓練組蔡宗翰召集人以及台灣微軟楊千旻法務協
+                      ...
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!-- LP End -->
+          <!-- Pagination -->
+          <div class="pagination">
+            <form action="">
+              <div class="form_inline">
+                <div class="total">
+                  共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
+                  <select name="" id="" aria-label="每頁顯示">
+                    <option value="">10</option>
+                    <option value="">20</option>
+                    <option value="">30</option>
+                    <option value="">40</option>
+                  </select>
+                  筆，
+                  <input type="button" value="確定" class="btn btn-submit" />
+                </div>
+              </div>
+            </form>
+            <ul class="page">
+              <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+              <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">6</a></li>
+              <li><a href="#">7</a></li>
+              <li><a href="#">8</a></li>
+              <li><a href="#">9</a></li>
+              <li><a href="#">10</a></li>
+              <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- fatfooter Start -->
+      <section class="fatfooter">
+        <div class="container">
+          <button type="button" name="展開選單/OPEN" aria-label="導覽選單展開/收合" class="btn btn-fatfooter">收合</button>
+          <div class="topicSite">
+            <div class="blockTitle">主題網站</div>
+            <ul>
+              <li><a href="#" title="">專利主題網</a></li>
+              <li><a href="#" title="">商標主題網</a></li>
+              <li><a href="#" title="">著作權主題網</a></li>
+              <li><a href="#" title="">著作權主題網</a></li>
+              <li><a href="#" title="">積體電路專區</a></li>
+              <li><a href="#" title="">智慧財產權e網通</a></li>
+              <li><a href="#" title="">中小企業IP專區</a></li>
+              <li><a href="#" title="">專利商品化教育宣導網</a></li>
+              <li><a href="#" title="">國家發明創作獎</a></li>
+              <li><a href="#" title="">台灣創新技術博覽會</a></li>
+              <li><a href="#" title="">保護智慧財產權行動方案專區</a></li>
+              <li><a href="#" title="">世界智慧財產權日</a></li>
+            </ul>
+          </div>
+          <div class="slideArea">
+            <div class="leftBlock">
+              <div class="subscribe">
+                <div class="blockTitle">訂閱電子報</div>
+                <p>每月寄送一次，提供我國智財權發展與新知 讓您完整掌握IP最新動態、國際趨勢</p>
+                <a href="#" target="_blank" class="btn" title="">立即訂閱</a>
+              </div>
+              <div class="serviceGrp">
+                <a href="" title=""><img src="images/icon_web.svg" alt="" />網站導覽</a>
+                <a href="" title=""><img src="images/icon_mail.svg" alt="" />意見信箱</a>
+                <a href="" title=""><img src="images/icon_chat.svg" alt="" />常見問答</a>
+                <a href="" title=""><img src="images/icon_vocabulary.svg" alt="" />雙語詞彙</a>
+              </div>
+            </div>
+            <nav aria-label="fatfooter的導航列">
+              <ul>
+                <li>
+                  <a href="#">便民服務</a>
+                  <ul>
+                    <li><a href="#">智慧財產權懶人包</a></li>
+                    <li><a href="#">線上申請 </a></li>
+                    <li><a href="#">檢索系統</a></li>
+                    <li><a href="#">電子報</a></li>
+                    <li><a href="#">便民服務計畫</a></li>
+                    <li><a href="#">資料服務資訊</a></li>
+                    <li><a href="#">COVID-19智財新訊</a></li>
+                    <li><a href="#">淨零排放智財資訊</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">最新消息</a>
+                  <ul>
+                    <li><a href="#">布告欄</a></li>
+                    <li><a href="#">法規公告</a></li>
+                    <li><a href="#">新聞稿</a></li>
+                    <li><a href="#">徵才快報</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">國際事務</a>
+                  <ul>
+                    <li><a href="#">國際動態</a></li>
+                    <li><a href="#">世界貿易組織(WTO)之議題</a></li>
+                    <li><a href="#">亞太經濟合作會議APEC</a></li>
+                    <li><a href="#">東南亞及南亞國家智慧財產權益維護專區</a></li>
+                    <li><a href="#">臺商在大陸地區智慧財產權益維護專區</a></li>
+                    <li><a href="#">智慧財產權國際公約</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">認識我們</a>
+                  <ul>
+                    <li><a href="#">本局簡介</a></li>
+                    <li><a href="#">局長簡介</a></li>
+                    <li><a href="#">各地服務處</a></li>
+                    <li><a href="#">經濟部光碟聯合查核小組</a></li>
+                    <li><a href="#">聯絡我們</a></li>
+                    <li><a href="#">雙語辭彙</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">公開資訊</a>
+                  <ul>
+                    <li><a href="#">法規資訊</a></li>
+                    <li><a href="#">統計專區</a></li>
+                    <li><a href="#">研究報告</a></li>
+                    <li><a href="">本局出版品</a></li>
+                    <li><a href="">預決算與會計月報</a></li>
+                    <li><a href="">採購契約</a></li>
+                    <li><a href="">請願與訴願</a></li>
+                    <li><a href="">行政指導文書</a></li>
+                    <li><a href="">補助資訊</a></li>
+                    <li><a href="">政府資料開放</a></li>
+                    <li><a href="">其他公開文件</a></li>
+                    <li><a href="">常見問題</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">服務園地</a>
+                  <ul>
+                    <li><a href="">檢警調專區</a></li>
+                    <li><a href="">新進人員專區</a></li>
+                    <li><a href="">退休人員專區</a></li>
+                    <li><a href="">影音專區</a></li>
+                    <li><a href="">廉政專區</a></li>
+                    <li><a href="">企業服務廉政平臺</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <!-- fatfooter End -->
+      <!-- footer Start-->
+      <footer>
+        <div class="container">
+          <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+          <div class="socialLink">
+            <a href="" title="Facebook"></a>
+          </div>
+          <div class="footer_info">
+            <ul class="footer_link">
+              <li><a href="javascript:;">政府網站資料開放宣告</a></li>
+              <li><a href="javascript:;">隱私權政策</a></li>
+              <li><a href="javascript:;">資訊安全政策</a></li>
+            </ul>
+            <p>
+              地址：106213 臺北市大安區辛亥路2段185號3樓 <a href="" title="交通位置圖">交通位置圖</a>｜<a href="" title="服務時間">服務時間</a>｜<a href="" title="各地服務處">各地服務處</a> <br />電話：(02)2738-0007｜傳真：(02)2377-9875｜電子申請暨專利客服電話：(02)8176-9009<br />
+              本網站支援IE、Firefox及Chrome，最佳瀏覽解析度為1024x768以上
+            </p>
+          </div>
+          <div class="footer_icon">
+            <a target="_blank" href="javascript:;">
+              <img src="images/basic/accessibility_aa.jpg" alt="通過AA優先等級無障礙網頁檢測,另開新視窗" />
+            </a>
+            <a target="_blank" href="javascript:;">
+              <img src="images/basic/egov.png" alt="我的e政府,另開新視窗" />
+            </a>
+            <a href="#"><img class="cover" src="images/qrcode.jpg" alt="智慧局網站連結Qrcode" /></a>
+          </div>
+        </div>
+      </footer>
+      <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- ease -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- slick -->
+    <script src="vendor/slick/slick.min.js "></script>
+    <!-- lazyload -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- scrolltable -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
+    <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+    <!-- hyUI -->
+    <script src="js/main.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  </body>
+</html>

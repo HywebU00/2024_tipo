@@ -1,0 +1,111 @@
+.faq .accordion {
+  margin-bottom: 2rem;
+  ul {
+    @include li-reset;
+    li.accordionList {
+      margin-bottom: 10px;
+      .accordionBtn {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+        font-size: 1.125em;
+        font-weight: bold;
+        padding: 16px 100px 16px 70px;
+        position: relative;
+        border: 1px solid $primaryColor;
+        &::before {
+          content: 'Q';
+          position: absolute;
+          font-size: 2rem;
+          padding: 16px;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          color: #fff;
+          background: $primaryColor;
+          display: block;
+        }
+        .accordionState {
+          font-weight: normal;
+          display: block;
+          position: absolute;
+          right: 10px;
+          top: 12px;
+          padding: 4px 30px 4px 10px;
+          background: #f1f1f1;
+          border-radius: 25px;
+          color: #666;
+          font-size: 0.875em;
+          &::after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            display: block;
+            border-top: 2px solid #666;
+            border-right: 2px solid #666;
+            transform: rotate(135deg);
+            position: absolute;
+            right: 12px;
+            top: 10px;
+            transition: all 0.5s;
+          }
+        }
+      }
+      .accordionContent {
+        .content {
+          padding: 1rem;
+          p {
+            margin-top: 0;
+          }
+          .dep {
+            text-align: right;
+          }
+        }
+      }
+      &.active {
+        .accordionBtn {
+          .accordionState {
+            &::after {
+              top: 12px;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.accordion {
+  & > ul {
+    list-style: none;
+    & > li {
+      margin-bottom: 1em;
+      & > a {
+        position: relative;
+        display: block;
+        background-color: #f7f7f7;
+        text-decoration: none;
+        padding: 2em 6em 2em 2em;
+        border-radius: 5px;
+        font-weight: bold;
+        @include aSetting_nocolor;
+        box-shadow: 0 2px 46px rgba(128, 128, 128, 0.27);
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          right: 3em;
+          transform: translate(0, -50%);
+          width: 22px;
+          height: 22px;
+          background: url('../images/icon/icon_add.svg') no-repeat center center;
+        }
+      }
+    }
+  }
+  .accordion-content {
+    line-height: 1.45em;
+    padding: 5px 0;
+  }
+}
+//
