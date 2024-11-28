@@ -9692,10 +9692,17 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   height: 50px;
   color: #fff;
   font-size: 1.25em;
+  line-height: 1;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 575px) {
+  .header .mobileQuickLink ul button,
+  .header .mobileQuickLink ul a {
+    font-size: 1rem;
+  }
 }
 .header .mobileQuickLink ul button:hover,
 .header .mobileQuickLink ul a:hover {
