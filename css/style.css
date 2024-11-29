@@ -9492,6 +9492,27 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   align-items: center;
   background: linear-gradient(to right, rgb(90, 83, 180) 0%, rgb(106, 54, 140) 100%);
   line-height: 1;
+  transform: perspective(1px) translateZ(0);
+  overflow: hidden;
+}
+.header .quickLink ul button:before,
+.header .quickLink ul a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.15);
+  transform: scale(0);
+  transition: 0.2s ease-in-out;
+}
+.header .quickLink ul button:hover:before,
+.header .quickLink ul a:hover:before {
+  content: "";
+  transform: scale(1);
 }
 @media screen and (max-width: 1200px) {
   .header .quickLink ul button,
@@ -9576,6 +9597,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 .header .container .sidebarCtrl span {
   background: #000 !important;
   height: 2px;
+  transition: 0.2s ease-in-out;
 }
 @media screen and (min-width: 992px) {
   .header .container .sidebarCtrl span {
@@ -9583,6 +9605,12 @@ span.file_wmv a:hover, span.file_wmv a:focus {
     left: 10px;
     margin-left: 0;
   }
+}
+.header .container .sidebarCtrl:hover span:first-of-type {
+  transform: translateY(-2px);
+}
+.header .container .sidebarCtrl:hover span:last-of-type {
+  transform: translateY(2px);
 }
 .header .menu {
   display: none;
@@ -10371,6 +10399,25 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   top: 0;
   width: 110px;
   height: 110px;
+  transform: perspective(1px) translateZ(0);
+}
+.mpBanner .faqBtn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #e5160c;
+  transform: scale(0);
+  transition: 0.2s ease-in-out;
+}
+.mpBanner .faqBtn:hover:before {
+  content: "";
+  transform: scale(1);
 }
 @media screen and (max-width: 1440px) {
   .mpBanner .faqBtn {
