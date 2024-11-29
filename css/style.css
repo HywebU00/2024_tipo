@@ -4944,6 +4944,7 @@ footer .footer_icon img {
 }
 .fatfooter nav > ul > li {
   flex: 1 1 33.33333%;
+  padding-right: 10px;
   box-sizing: border-box;
   margin-bottom: 20px;
 }
@@ -4998,6 +4999,7 @@ footer .footer_icon img {
   text-underline-offset: 12px; /* 控制底線距離 */
   text-decoration-thickness: 2px;
   margin-bottom: 1.5em;
+  text-transform: capitalize;
 }
 .fatfooter .topicSite {
   margin-bottom: 50px;
@@ -5034,7 +5036,7 @@ footer .footer_icon img {
   }
 }
 .fatfooter .leftBlock {
-  flex-basis: 33.33333%;
+  flex: 0 0 33.33333%;
   border-right: 1px solid #7d7d7d;
   padding-right: 4em;
   display: flex;
@@ -10422,6 +10424,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   display: flex;
   font-weight: bold;
   margin: 15px 0 50px 0;
+  align-items: center;
 }
 .topic .titleWrapper .initial {
   flex: 0 0 70px;
@@ -11172,6 +11175,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   align-items: center;
   color: #fff;
   font-weight: bold;
+  text-transform: capitalize;
 }
 .tools .colorMark li.patent {
   background: url("../images/mp/hexagon_p.svg") center center no-repeat;
@@ -11715,7 +11719,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 .dashboard .statistics .block {
   position: relative;
   flex: 0 0 33.33333%;
-  padding: 0 10px;
+  padding: 0 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11775,13 +11779,30 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 }
 .dashboard .statistics .text {
   color: #fff;
-  font-size: 1.25rem;
   margin-left: 15px;
 }
 @media screen and (max-width: 991px) and (min-width: 576px) {
   .dashboard .statistics .text {
     margin-left: 0;
   }
+}
+
+.wrapper.EN .tools .container {
+  align-items: center;
+}
+.wrapper.EN .tools .accordion {
+  margin-top: 0;
+}
+.wrapper.EN .tools .colorMark {
+  flex-wrap: wrap;
+}
+.wrapper.EN .tools .colorMark li {
+  flex-basis: 120px;
+  max-width: 120px;
+}
+.wrapper.EN .multimedia [class^=multimediaBlock] .subTitle {
+  flex-basis: 280px;
+  font-size: 2rem;
 }
 
 h1.title,

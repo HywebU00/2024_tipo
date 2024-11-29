@@ -1241,6 +1241,7 @@
     display: flex;
     font-weight: bold;
     margin: 15px 0 50px 0;
+    align-items: center;
     .initial {
       flex: 0 0 70px;
       width: 70px;
@@ -1972,6 +1973,7 @@
       align-items: center;
       color: #fff;
       font-weight: bold;
+      text-transform: capitalize;
       &.patent {
         background: url('../images/mp/hexagon_p.svg') center center no-repeat;
         background-size: contain;
@@ -2498,7 +2500,7 @@
     .block {
       position: relative;
       flex: 0 0 33.33333%;
-      padding: 0 10px;
+      padding: 0 15px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -2554,7 +2556,6 @@
     }
     .text {
       color: #fff;
-      font-size: 1.25rem;
       margin-left: 15px;
       @media screen and (max-width: 991px) and (min-width: 576px) {
         margin-left: 0;
@@ -2563,6 +2564,32 @@
       //   font-size: 1rem;
       //   letter-spacing: 0;
       // }
+    }
+  }
+}
+
+.wrapper.EN {
+  .tools {
+    .container {
+      align-items: center;
+    }
+    .accordion {
+      margin-top: 0;
+    }
+    .colorMark {
+      flex-wrap: wrap;
+      li {
+        flex-basis: 120px;
+        max-width: 120px;
+      }
+    }
+  }
+  .multimedia {
+    [class^='multimediaBlock'] {
+      .subTitle {
+        flex-basis: 280px;
+        font-size: 2rem;
+      }
     }
   }
 }
