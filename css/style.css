@@ -3391,7 +3391,7 @@ div.tag ul li a.active:hover {
   display: block;
 }
 .header h1 {
-  float: left;
+  flex: 0 1 300px;
   width: 300px;
   height: 75px;
   margin: 0;
@@ -3403,8 +3403,10 @@ div.tag ul li a.active:hover {
 }
 .header h1 img {
   display: block;
-  max-width: 300px;
-  max-height: 75px;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media screen and (max-width: 767px) {
   .header h1 {
@@ -9452,6 +9454,11 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 .header .quickLink {
   margin-right: 40px;
 }
+@media screen and (max-width: 1200px) {
+  .header .quickLink {
+    margin-right: 0;
+  }
+}
 @media screen and (max-width: 991px) {
   .header .quickLink {
     display: none;
@@ -9464,6 +9471,11 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   margin: 0;
   gap: 10px;
   font-size: 16px;
+}
+@media screen and (max-width: 1200px) {
+  .header .quickLink ul {
+    gap: 0;
+  }
 }
 .header .quickLink ul button,
 .header .quickLink ul a {
@@ -9479,12 +9491,13 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to right, rgb(90, 83, 180) 0%, rgb(106, 54, 140) 100%);
+  line-height: 1;
 }
 @media screen and (max-width: 1200px) {
   .header .quickLink ul button,
   .header .quickLink ul a {
     width: 100px;
-    font-size: 1.1em;
+    font-size: 1em;
   }
 }
 .header .quickLink ul button:focus-visible,
@@ -9747,6 +9760,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
     background: none !important;
     display: flex;
     align-items: center;
+    white-space: nowrap;
   }
   .header .language > a::after, .header .language > a::before {
     display: none;
