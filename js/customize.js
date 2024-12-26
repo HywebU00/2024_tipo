@@ -668,6 +668,40 @@ $(function () {
   );
 });
 
+//錨點滾動
+// 選取所有 anchorBlock 裡的 <a> 標籤
+const anchors = document.querySelectorAll('.anchorNav a');
+
+// 添加點擊事件給每個 <a>
+anchors.forEach((anchor) => {
+  anchor.addEventListener('click', function (event) {
+    // 檢查 .header 是否有 .sticky 類別
+    const header = document.querySelector('.header');
+    if (header && header.classList.contains('sticky')) {
+      event.preventDefault(); // 阻止預設滾動行為
+
+      // 取得對應的錨點元素
+      const targetId = this.getAttribute('href').substring(1); // 去掉 "#" 符號
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        // 計算錨點的位置，加上額外的 100px 偏移
+        // const offsetPosition = targetElement.offsetTop;
+        const stickyHeight = 90; // 預設 sticky 的 top 值
+        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - stickyHeight;
+
+        // 平滑滾動到計算好的位置
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+        targetElement.focus({ preventScroll: true });
+      }
+    }
+  });
+});
+
 $(function () {
   $('.result_bar .percent').each(function () {
     var aa = $(this).text();
