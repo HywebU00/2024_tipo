@@ -56,6 +56,9 @@
           &:hover {
             color: $aHover;
           }
+          @include screen('mobile') {
+            padding-left: 0;
+          }
           .num {
             width: 3em;
             text-align: right;
@@ -65,6 +68,9 @@
             &:after {
               content: '.';
               display: inline-block;
+            }
+            @include screen('mobile') {
+              position: relative;
             }
           }
           .listPic {
@@ -78,6 +84,12 @@
               max-height: 180px;
               height: auto;
               margin: 0 auto;
+            }
+            @include screen('mobile') {
+              float: none;
+              width: 100%;
+              margin-right: 0;
+              margin-bottom: 10px;
             }
           }
           .listTitle {

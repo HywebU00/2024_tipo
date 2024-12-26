@@ -70,7 +70,7 @@
 
 .sidebar button.sidebarClose {
   &:focus-visible {
-    outline: 2px dashed #ff3e4d;
+    outline: 2px solid #ff3e4d;
   }
 }
 
@@ -138,7 +138,7 @@
     }
 
     &:focus-visible {
-      outline: 2px dashed #ff3e4d;
+      outline: 2px solid #ff3e4d;
     }
 
     &::before {
@@ -266,7 +266,7 @@
           font-size: 1em;
         }
         &:focus-visible {
-          outline: 2px dashed #ff3e4d;
+          outline: 2px solid #ff3e4d;
         }
       }
     }
@@ -331,7 +331,7 @@
       }
 
       &:focus-visible {
-        outline: 2px dashed #ff3e4d;
+        outline: 2px solid #ff3e4d;
       }
     }
 
@@ -528,7 +528,7 @@
         }
 
         &:focus-visible {
-          outline: 2px dashed #ff3e4d;
+          outline: 2px solid #ff3e4d;
         }
       }
     }
@@ -604,12 +604,23 @@
     top: 0;
     bottom: 0;
     width: 100%;
-
+    z-index: 99;
     @include screen('mobile') {
       padding: 2em 1em;
     }
-
-    .link_box {
+    &.talent {
+      background: $color-patent;
+    }
+    &.trademark {
+      background: $color-trademark;
+    }
+    &.copyright {
+      background: $color-copyright;
+    }
+    &.tradeSecret {
+      background: $color-businessSecrets;
+    }
+    & .link_box {
       padding: 4em 2em;
       display: block;
       max-width: $container-max;
@@ -688,7 +699,7 @@
                 }
 
                 &:focus-visible {
-                  outline: 1px dashed red;
+                  outline: 1px solid red;
                 }
 
                 &:before {
@@ -1172,10 +1183,15 @@
       li {
         a {
           display: block;
-          width: 38px;
-          height: 38px;
+          width: 66px;
+          height: 66px;
           background: url('../images/mp/icon_share.png') no-repeat;
           background-size: 100%;
+          transition: 0.2s ease-out;
+          &:hover,
+          &:focus {
+            transform: translateY(-4px);
+          }
         }
 
         &.mail a {
@@ -1183,19 +1199,19 @@
         }
 
         &.fb a {
-          background-position: 0px -38px;
+          background-position: 0px -66px;
         }
 
         &.yt a {
-          background-position: 0 -76px;
+          background-position: 0 -132px;
         }
 
         &.rss a {
-          background-position: 0 -114px;
+          background-position: 0 -198px;
         }
 
         &.flickr a {
-          background-position: 0 -152px;
+          background-position: 0 -264px;
         }
       }
     }
@@ -1697,7 +1713,8 @@
         top: calc(100% - 122px);
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         //min-height: 187px;
         .more {
           //display: block;
@@ -1878,7 +1895,7 @@
       }
       &:focus-visible {
         .content {
-          outline: 2px dashed $color-red;
+          outline: 2px solid $color-red;
         }
       }
     }

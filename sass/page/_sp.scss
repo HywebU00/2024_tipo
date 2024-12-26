@@ -807,6 +807,7 @@
   overflow: hidden;
   padding: 0 15px;
   max-width: $container-max;
+  margin: 0 auto;
   @include screen('tablet') {
     flex-wrap: wrap;
   }
@@ -864,15 +865,75 @@
         }
       }
     }
+    .leftMenuOpen {
+      display: none;
+      margin: 0;
+      width: 100%;
+      background-color: $aColor;
+      color: #fff;
+      @include screen('tablet') {
+        display: block;
+      }
+    }
     .left_menu {
+      display: block;
       background: #f1f1f1;
       border: 1px solid #ccc;
       font-size: 0.938em;
-      @include screen('mobile') {
+      @include screen('tablet') {
         display: none;
+        background-color: #333;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        padding-top: 60px;
+        min-height: 100dvh;
+        min-width: 100dvw;
+        max-width: 100%;
+      }
+      .leftMenuClose {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 0;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        color: transparent;
+        border: none;
+        background: none;
+        position: absolute;
+        min-width: auto;
+        margin: 0;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          width: 30px;
+          height: 1px;
+          display: block;
+          z-index: 9;
+          left: 50%;
+          top: 50%;
+          background: #fff;
+        }
+
+        &::before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
       }
       ul {
         @include li-reset;
+        @include screen('tablet') {
+          max-height: calc(100dvh - 60px);
+          overflow-y: auto;
+        }
       }
       > ul {
         > li {

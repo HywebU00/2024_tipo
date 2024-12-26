@@ -699,4 +699,42 @@ $(function () {
           $(this).hide();
         });
     });
+
+  function handleMenu() {
+    if ($(window).width() < 992) {
+      // if (!$('.leftMenuOpen').length) {
+      //   $('.left_block .left_menu').before('<button class="leftMenuOpen">Open Menu</button>');
+      // }
+
+      if (!$('.leftMenuClose').length) {
+        $('.left_block .left_menu').prepend('<button class="leftMenuClose">Close Menu</button>');
+      }
+
+      $('.leftMenuOpen')
+        .off('click')
+        .on('click', function () {
+          $('.left_block .left_menu').slideDown();
+          //$(this).hide(); // 隱藏開啟按鈕
+        });
+
+      $('.leftMenuClose')
+        .off('click')
+        .on('click', function () {
+          $('.left_block .left_menu').slideUp();
+          //$('.leftMenuOpen').show(); // 顯示開啟按鈕
+        });
+
+      $('.left_block .left_menu').hide();
+      //$('.leftMenuOpen').show();
+    } else {
+      $('.left_block .left_menu').show();
+      $(' .leftMenuClose').remove();
+    }
+  }
+
+  handleMenu();
+
+  $(window).resize(function () {
+    handleMenu();
+  });
 });
