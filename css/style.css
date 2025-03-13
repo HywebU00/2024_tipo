@@ -7567,6 +7567,7 @@ table thead th {
   width: auto;
   left: 190px;
   justify-content: flex-start;
+  pointer-events: none;
 }
 .eventSlider .slick-dots li {
   list-style: none;
@@ -7628,6 +7629,26 @@ table thead th {
 
 .cppic_slider .slick-track .slick-slide > div {
   padding: 0 10px;
+}
+
+.controlBox .slick-control {
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin-right: 10px;
+  border: none;
+}
+.controlBox .slick-control.slickPlay {
+  background: #5a53b4 url(../images/icon_pause.svg) center center no-repeat;
+  background-size: 20px;
+}
+.controlBox .slick-control.slickPause {
+  background: #5a53b4 url(../images/icon_play.svg) center center no-repeat;
+  background-size: 20px;
+}
+.controlBox .slick-control:hover {
+  background-color: #464094;
 }
 
 .function_panel {
@@ -10050,7 +10071,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   .mpBanner {
     margin-top: 20px;
     padding: 0 20px;
-    margin-bottom: 60px;
+    margin-bottom: 90px;
   }
 }
 @media screen and (max-width: 575px) {
@@ -10066,6 +10087,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 }
 .mpBanner .outerBox img {
   height: 643px !important;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -10257,6 +10279,14 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   position: absolute;
   left: 0;
   bottom: 0;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 991px) {
+  .mpBanner .controlBox {
+    bottom: -40px;
+    left: 20px;
+  }
 }
 .mpBanner .slick-dots {
   position: relative;
@@ -10266,12 +10296,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   right: auto;
   display: flex;
   gap: 14px;
-}
-@media screen and (max-width: 991px) {
-  .mpBanner .slick-dots {
-    bottom: -40px;
-    left: 20px;
-  }
+  margin-top: 5px;
 }
 .mpBanner .slick-dots li {
   width: auto;
@@ -10390,20 +10415,46 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 .mpBanner .shareBox ul li a:hover, .mpBanner .shareBox ul li a:focus {
   transform: translateY(-4px);
 }
+@media screen and (max-width: 767px) {
+  .mpBanner .shareBox ul li a {
+    width: 40px;
+    height: 40px;
+  }
+}
 .mpBanner .shareBox ul li.mail a {
   background-position: 0 0;
 }
 .mpBanner .shareBox ul li.fb a {
   background-position: 0px -66px;
 }
+@media screen and (max-width: 767px) {
+  .mpBanner .shareBox ul li.fb a {
+    background-position: 0px -40px;
+  }
+}
 .mpBanner .shareBox ul li.yt a {
   background-position: 0 -132px;
+}
+@media screen and (max-width: 767px) {
+  .mpBanner .shareBox ul li.yt a {
+    background-position: 0 -80px;
+  }
 }
 .mpBanner .shareBox ul li.rss a {
   background-position: 0 -198px;
 }
+@media screen and (max-width: 767px) {
+  .mpBanner .shareBox ul li.rss a {
+    background-position: 0 -120px;
+  }
+}
 .mpBanner .shareBox ul li.flickr a {
   background-position: 0 -264px;
+}
+@media screen and (max-width: 767px) {
+  .mpBanner .shareBox ul li.flickr a {
+    background-position: 0 -160px;
+  }
 }
 .mpBanner .faqBtn {
   position: absolute;
@@ -11752,7 +11803,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 50px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 767px) {
   .dashboard .dataSlider {
@@ -11785,6 +11836,18 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 .dashboard .dataSlider .chart .datachart {
   width: 100%;
   height: 100%;
+}
+.dashboard .dataSlider + .controlBox {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+.dashboard .dataSlider + .controlBox .slick-control {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.dashboard .dataSlider + .controlBox .slick-control:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .dashboard .statistics {
   display: flex;

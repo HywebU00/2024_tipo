@@ -8,6 +8,9 @@ $(function () {
     infinite: true,
     speed: 500,
     autoplay: true,
+    autoplaySpeed: 4000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     fade: true,
     lazyLoaded: true,
     lazyLoad: 'ondemand',
@@ -20,6 +23,117 @@ $(function () {
       return $('<button type="button" aria-label="' + title + '"/>').text(title);
     },
   });
+
+  // 控制自動播放的變數
+  let isPlaying = true;
+
+  // 更新輪播狀態提示
+  function updateCarouselStatus(currentSlide, totalSlides) {
+    $('#carousel-status').text(`目前顯示第 ${currentSlide} 張投影片，共 ${totalSlides} 張`);
+  }
+
+  // 處理暫停/播放按鈕點擊
+  $('#mpSlider-toggle-autoplay').click(function () {
+    if (isPlaying) {
+      // 暫停播放
+      $('.mpSlider').slick('slickPause');
+      $(this).text('開始播放').attr('aria-label', '開始自動播放輪播').attr('aria-pressed', 'true').addClass('slickPause').removeClass('slickPlay');
+    } else {
+      // 開始播放
+      $('.mpSlider').slick('slickPlay');
+      $(this).text('暫停播放').attr('aria-label', '暫停自動播放輪播').attr('aria-pressed', 'false').addClass('slickPlay').removeClass('slickPause');
+    }
+    isPlaying = !isPlaying;
+  });
+
+  // 監聽輪播變化
+  $('.mpSlider').on('afterChange', function (event, slick, currentSlide) {
+    updateCarouselStatus(currentSlide + 1, slick.slideCount);
+  });
+
+  // 初始化狀態提示
+  updateCarouselStatus(1, $('.mpSlider').slick('getSlick').slideCount);
+
+  // 鍵盤控制
+  $('.mpSlider').on('keydown', function (e) {
+    switch (e.key) {
+      case 'ArrowLeft':
+        $(this).slick('slickPrev');
+        break;
+      case 'ArrowRight':
+        $(this).slick('slickNext');
+        break;
+      case 'Space':
+        $('#toggle-autoplay').click();
+        e.preventDefault();
+        break;
+    }
+  });
+});
+
+$(function () {
+  $('.dataSlider').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: true,
+    fade: true,
+    lazyLoaded: true,
+    lazyLoad: 'ondemand',
+    ease: 'ease',
+  });
+  // 控制自動播放的變數
+  let isPlaying = true;
+
+  // 更新輪播狀態提示
+  function updateCarouselStatus(currentSlide, totalSlides) {
+    $('#carousel-status').text(`目前顯示第 ${currentSlide} 張投影片，共 ${totalSlides} 張`);
+  }
+
+  // 處理暫停/播放按鈕點擊
+  $('#dataSlider-toggle-autoplay').click(function () {
+    if (isPlaying) {
+      // 暫停播放
+      $('.dataSlider').slick('slickPause');
+      $(this).text('開始播放').attr('aria-label', '開始自動播放輪播').attr('aria-pressed', 'true').addClass('slickPause').removeClass('slickPlay');
+    } else {
+      // 開始播放
+      $('.dataSlider').slick('slickPlay');
+      $(this).text('暫停播放').attr('aria-label', '暫停自動播放輪播').attr('aria-pressed', 'false').addClass('slickPlay').removeClass('slickPause');
+    }
+    isPlaying = !isPlaying;
+  });
+
+  // 監聽輪播變化
+  $('.dataSlider').on('afterChange', function (event, slick, currentSlide) {
+    updateCarouselStatus(currentSlide + 1, slick.slideCount);
+  });
+
+  // 初始化狀態提示
+  updateCarouselStatus(1, $('.dataSlider').slick('getSlick').slideCount);
+
+  // 鍵盤控制
+  $('.dataSlider').on('keydown', function (e) {
+    switch (e.key) {
+      case 'ArrowLeft':
+        $(this).slick('slickPrev');
+        break;
+      case 'ArrowRight':
+        $(this).slick('slickNext');
+        break;
+      case 'Space':
+        $('#toggle-autoplay').click();
+        e.preventDefault();
+        break;
+    }
+  });
+});
+
+$(function () {
   // 廣告輪播
   $('.adSlider').slick({
     mobileFirst: true,
@@ -69,7 +183,7 @@ $(function () {
     speed: 500,
     slidesToShow: 1.1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     arrows: false,
     lazyLoaded: true,
     lazyLoad: 'ondemand',
@@ -102,7 +216,7 @@ $(function () {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     arrows: true,
     lazyLoaded: true,
     lazyLoad: 'ondemand',
@@ -114,20 +228,6 @@ $(function () {
       const formattedTotal = totalSlides.toString().padStart(2, '0'); // 總數也格式化為兩位數
       return `<div class="slick-dot"><span>${formattedCurrent}</span> / ${formattedTotal}</div>`;
     },
-  });
-
-  $('.dataSlider').slick({
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    arrows: true,
-    fade: true,
-    lazyLoaded: true,
-    lazyLoad: 'ondemand',
-    ease: 'ease',
   });
 
   //燈箱slick+lightBox組合

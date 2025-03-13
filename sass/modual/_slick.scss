@@ -858,6 +858,7 @@
     width: auto;
     left: 190px;
     justify-content: flex-start;
+    pointer-events: none;
     li {
       list-style: none;
       width: auto;
@@ -924,6 +925,28 @@
       & > div {
         padding: 0 10px;
       }
+    }
+  }
+}
+
+.controlBox {
+  .slick-control {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-right: 10px;
+    border: none;
+    &.slickPlay {
+      background: $aColor url(../images/icon_pause.svg) center center no-repeat;
+      background-size: 20px;
+    }
+    &.slickPause {
+      background: $aColor url(../images/icon_play.svg) center center no-repeat;
+      background-size: 20px;
+    }
+    &:hover {
+      background-color: $aHover;
     }
   }
 }
