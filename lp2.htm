@@ -429,9 +429,9 @@
           <div class="nodeMenu">
             <ul class="node3">
               <li><a href="">發明創作獎助辦法</a></li>
-              <li>
-                <a href="">國家發明創作獎甄選要點</a>
-                <ul class="node4">
+              <li class="hasChild">
+                <a href="#" aria-expanded="false">國家發明創作獎甄選要點</a>
+                <ul class="node4" aria-hidden="true">
                   <li class="active2"><a href="">甄選要點</a></li>
                   <li><a href="">甄選要點</a></li>
                   <li><a href="">甄選要點</a></li>
@@ -441,9 +441,9 @@
               </li>
               <li><a href="">報名資料</a></li>
               <li><a href="">評選結果資訊</a></li>
-              <li class="active">
-                <a href="">得獎專輯</a>
-                <ul class="node4">
+              <li class="hasChild">
+                <a href="#" aria-expanded="true">得獎專輯</a>
+                <ul class="node4" aria-hidden="false">
                   <li class="active2">
                     <a href="">110年 (發明獎、創作獎)</a>
                   </li>
@@ -455,6 +455,21 @@
               </li>
               <li><a href="">第三層選單</a></li>
               <li><a href="">第三層選單</a></li>
+              <li><a href="">第三層選單</a></li>
+              <li><a href="">第三層選單</a></li>
+              <li><a href="">評選結果資訊</a></li>
+              <li class="hasChild">
+                <a href="#" aria-expanded="true">得獎專輯</a>
+                <ul class="node4" aria-hidden="false">
+                  <li class="active2">
+                    <a href="">110年 (發明獎、創作獎)</a>
+                  </li>
+                  <li><a href="">109年 (發明獎、創作獎)</a></li>
+                  <li><a href="">108年 (發明獎、創作獎)</a></li>
+                  <li><a href="">107年 (發明獎、創作獎)</a></li>
+                  <li><a href="">106年 (發明獎、創作獎)</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
           <!-- breadcrumb路徑 -->
@@ -471,7 +486,7 @@
           <div class="function_panel">
             <!-- advSearch 顯示條件查詢 -->
             <div class="advSearch">
-              <button type="button" name="顯示條件查詢/OPEN" aria-label="顯示條件查詢展開/收合" class="btn">顯示條件查詢</button>
+              <button type="button" aria-expanded="false" aria-controls="advSearchContent" class="btn">顯示條件查詢</button>
             </div>
             <!-- font_size -->
             <div class="font_size">
@@ -526,7 +541,7 @@
               </ul>
             </div>
           </div>
-          <div class="advSearchContent">
+          <div class="advSearchContent" class="advSearchContent" hidden>
             <div class="content">
               <form action="">
                 <div class="form_grid flex-form">
