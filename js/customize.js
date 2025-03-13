@@ -699,6 +699,7 @@ $(function () {
     const windowWidth = $(window).width();
     let nextHeight = $('.nodeMenu li.active').children('ul').outerHeight() || 0;
     let parentHeight = $('.nodeMenu li.active').parents('ul').outerHeight() || 0;
+    let node3Height = $('.node3').outerHeight() || 0;
     let m3BtnHeight = $('.nodeMenu .m3Btn').outerHeight() || 0;
     let m4BtnHeight = $('.nodeMenu li.active .m4Btn').outerHeight() || 0;
 
@@ -706,16 +707,16 @@ $(function () {
     $('.nodeMenu ul').attr('style', '');
     if (windowWidth > 768) {
       $('.nodeMenu a').removeClass('open');
-      $('.nodeMenu').css('height', `${parentHeight + nextHeight + 16}px`);
+      $('.nodeMenu').css('height', `${node3Height + nextHeight + 16}px`);
       $('.nodeMenu li.active')
         .children('ul')
         .css('top', `${parentHeight + 16}px`);
     } else {
-      $('.nodeMenu').css('height', `${parentHeight + nextHeight + m4BtnHeight + m3BtnHeight + 10}px`);
+      $('.nodeMenu').css('height', `${node3Height + nextHeight + m4BtnHeight + m3BtnHeight + 10}px`);
       $('.nodeMenu li.active')
         .children('ul')
-        .css('top', `${parentHeight + m4BtnHeight + m3BtnHeight + 10}px`);
-      $('.nodeMenu li.active .m4Btn').css('top', `${parentHeight + m3BtnHeight}px`);
+        .css('top', `${node3Height + m4BtnHeight + m3BtnHeight + 10}px`);
+      $('.nodeMenu li.active .m4Btn').css('top', `${node3Height + m3BtnHeight}px`);
     }
   }
 });
