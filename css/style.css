@@ -3587,6 +3587,11 @@ div.tag ul li a.active:hover {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .m_search .form_grp {
+    flex-wrap: wrap;
+  }
+}
 .m_search .form_grp label {
   display: none;
   flex: 0 0 0%;
