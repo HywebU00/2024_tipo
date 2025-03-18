@@ -189,7 +189,7 @@
       width: auto;
       &[type='submit'] {
         min-width: auto;
-        padding: 0.2em 0.8em;
+        padding: 0.5em 0.8em;
       }
       &:focus {
         box-shadow: 0 0px 0px 2px $aFocus;
@@ -201,15 +201,18 @@
       min-width: auto;
       padding: 0.2em 0.8em;
       margin: 0;
-      &:hover,
-      &:focus {
-        box-shadow: none !important;
+      // &:hover,
+      // &:focus {
+      //   box-shadow: none !important;
+      // }
+      &:focus-visible {
+        box-shadow: 0 0px 0px 2px $aFocus;
       }
     }
   }
   .btn_grp {
     flex: 0 0 auto;
-    padding: 0 0.5em 0;
+    padding: 0;
     margin: 0;
     button,
     .btn,
@@ -217,9 +220,12 @@
       min-width: auto;
       padding: 0.2em 0.8em;
       margin: 0;
-      &:hover,
-      &:focus {
-        box-shadow: none !important;
+      // &:hover,
+      // &:focus {
+      //   box-shadow: none !important;
+      // }
+      &:focus-visible {
+        box-shadow: 0 0px 0px 2px $aFocus;
       }
     }
   }
@@ -262,6 +268,10 @@
   background: #333;
   display: none;
   margin: 0;
+  @media screen and (min-width: 992px) {
+    z-index: 1000 !important;
+    top: 0 !important;
+  }
   label {
     font-size: 0em;
     line-height: 0;
@@ -289,30 +299,40 @@
       padding: 0.5em 0.8em;
       margin: 0;
       flex: 1 1 20%;
-      max-width: 25%;
-      &:hover,
-      &:focus {
-        box-shadow: none !important;
+      //max-width: 25%;
+      // &:hover,
+      // &:focus {
+      //   box-shadow: none !important;
+      // }
+      &:focus-visible {
+        box-shadow: 0 0px 0px 2px $aFocus;
       }
     }
   }
   .btn_grp {
     flex: 1 1 auto;
-    padding: 0.25em 0.5em;
+    //padding: 0.25em 0.5em;
     border-bottom: solid 1px #444;
     box-sizing: border-box;
     text-align: right;
+    padding-right: 40px;
+    text-align: left;
+    border: none;
+
     .btn {
       width: auto !important;
-      padding: 0.2em 0.5em !important;
+      padding: 0.5em 0.8em;
       margin: 0;
-      background: transparent;
-      font-size: 0.875rem;
+      background: $aColor;
       color: #ddd;
       border: none;
       &:hover,
       &:focus {
-        color: lighten($aHover, 10);
+        color: #ddd;
+        background: $aHover;
+      }
+      &:focus-visible {
+        box-shadow: 0 0px 0px 2px $aFocus;
       }
     }
   }
@@ -337,9 +357,50 @@
         color: #fff;
         &:hover,
         &:focus {
-          color: lighten($aHover, 10);
+          color: #fff;
+          text-decoration: underline;
         }
       }
+    }
+  }
+  .searchClose {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    max-width: 50px !important;
+    color: transparent;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    min-width: auto;
+    margin: 0;
+
+    @include screen('tablet') {
+      top: 5px;
+      right: 5px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 1px;
+      display: block;
+      z-index: 9;
+      left: 50%;
+      top: 50%;
+      background: #fff;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
 }

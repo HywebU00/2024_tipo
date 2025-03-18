@@ -7,67 +7,6 @@
   }
 }
 
-.m_search {
-  @media screen and (min-width: 992px) {
-    z-index: 1000 !important;
-    top: 0 !important;
-  }
-
-  .btn_grp {
-    padding-right: 40px;
-    text-align: left;
-    border: none;
-
-    input[type='submit'] {
-      margin: 0;
-      padding: 0;
-      flex: none;
-      max-width: none;
-    }
-  }
-
-  .searchClose {
-    width: 35px;
-    height: 35px;
-    padding: 0;
-    max-width: 50px !important;
-    color: transparent;
-    border: none;
-    background: none;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    min-width: auto;
-    margin: 0;
-
-    @include screen('tablet') {
-      top: 5px;
-      right: 5px;
-    }
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      width: 30px;
-      height: 1px;
-      display: block;
-      z-index: 9;
-      left: 50%;
-      top: 50%;
-      background: #fff;
-    }
-
-    &::before {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    &::after {
-      transform: translate(-50%, -50%) rotate(-45deg);
-    }
-  }
-}
-
 .sidebar button.sidebarClose {
   &:focus-visible {
     outline: 2px solid #ff3e4d;

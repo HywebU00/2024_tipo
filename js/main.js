@@ -99,22 +99,51 @@ $(function () {
     e.preventDefault();
     $('.header .menu').fadeIn('fast');
     $('body').addClass('noscroll');
+
+    // 監聽 ESC 鍵
+    $(document).on('keydown.menu', function (e) {
+      if (e.key === 'Escape') {
+        $('.header .menu').fadeOut('fast');
+        $('body').removeClass('noscroll');
+        $('.sidebarCtrl').focus(); // 關閉後將焦點回到 .sidebarCtrl
+        $(document).off('keydown.menu'); // 解除 ESC 監聽
+      }
+    });
   });
+
   $('.header .menu .menuClose').on('click', function (e) {
     e.preventDefault();
     $('.header .menu').fadeOut('fast');
     $('body').removeClass('noscroll');
+    $('.sidebarCtrl').focus(); // 關閉後將焦點回到 .sidebarCtrl
+    $(document).off('keydown.menu'); // 解除 ESC 監聽
   });
 
+  // $('.header .menu .menuClose').on('keydown', function (e) {
+  //   if (e.which === 9 && e.shiftKey) {
+  //     $('.header .menu a,.header .menu button')
+  //       .eq($('.header .menu a,.header .menu button').length - 1)
+  //       .focus();
+  //   } else if (e.which === 9) {
+  //     $('.header .menu a,.header .menu button').eq(0).focus();
+  //   }
+  // });
   $('.header .menu .menuClose').on('keydown', function (e) {
+    let focusableItems = $('.header .menu').find('a, button, input, textarea, select').filter(':visible');
+    let firstItem = focusableItems.first();
+    let lastItem = focusableItems.last();
+
     if (e.which === 9 && e.shiftKey) {
-      $('.header .menu a,.header .menu button')
-        .eq($('.header .menu a,.header .menu button').length - 1)
-        .focus();
+      // Shift + Tab 回到最後一個元素
+      e.preventDefault();
+      lastItem.focus();
     } else if (e.which === 9) {
-      $('.header .menu a,.header .menu button').eq(0).focus();
+      // Tab 鍵循環到第一個元素
+      e.preventDefault();
+      firstItem.focus();
     }
   });
+
   $('.header .menu a,.header .menu button')
     .eq(0)
     .on('keydown', function (e) {
@@ -548,10 +577,24 @@ $(function () {
   }
   _searchCtrl.off().on('click', function (e) {
     searchToggle();
+    if (search_mode) {
+      // 監聽 ESC 鍵
+      $(document).on('keydown.search', function (e) {
+        if (e.key === 'Escape') {
+          searchToggle();
+          $(document).off('keydown.search'); // 解除監聽，避免影響其他鍵盤操作
+          _searchCtrl.focus(); // 避免焦點消失
+        }
+      });
+    } else {
+      $(document).off('keydown.search'); // 確保關閉時解除監聽
+    }
   });
+
   $('.searchClose').on('click', function () {
     searchToggle();
     _searchCtrl.focus();
+    $(document).off('keydown.search'); // 確保關閉時解除監聽
   });
 
   $('.searchClose').on('keydown', function (e) {
