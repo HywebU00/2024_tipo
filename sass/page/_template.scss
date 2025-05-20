@@ -485,16 +485,18 @@ body {
         @extend %clearfix;
         @include li-reset;
         li {
-          flex: 1 1 calc(100% / 4);
-          margin-bottom: 0.5em;
+          white-space: nowrap;
+          flex: 1 1 calc(100% / 4 - 0.5em);
+          margin: 0 0.5em 0.5em 0;
+
           @include screen('tablet') {
-            flex: 1 1 calc(100% / 3);
+            flex: 1 1 calc(100% / 3 - 0.5em);
           }
           @include screen('mobile') {
-            flex: 1 1 calc(100% / 2);
+            flex: 1 1 calc(100% / 2 - 0.5em);
           }
           @include screen('xs_mobile') {
-            flex: 1 1 calc(100% / 1);
+            flex: 1 1 calc(100% / 1 - 0.5em);
             text-align: center;
           }
         }

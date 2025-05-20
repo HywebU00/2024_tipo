@@ -64,15 +64,20 @@
         padding: 0 1em;
         min-height: 2.5em;
         font-weight: bold;
-        line-height: 2.5em;
-        white-space: nowrap;
+        line-height: 2em;
+        //white-space: nowrap;
         color: $color-word;
+        word-break: break-word;
+        position: relative;
       }
 
       &.hasChild {
         > a {
           &:after {
             content: '';
+            position: absolute;
+            top: 18px;
+            right: 0;
             width: 4px;
             height: 4px;
             display: inline-block;
@@ -106,7 +111,7 @@
       position: relative;
 
       a {
-        display: block;
+        display: inline-block;
         text-decoration: none;
       }
 
@@ -187,7 +192,6 @@
   }
 }
 
-
 .menuArrowDown,
 .menuArrowUp {
   width: 20px;
@@ -219,7 +223,7 @@
 .menuArrowDown {
   &::before {
     transform: rotate(45deg);
-    left: 4px
+    left: 4px;
   }
 
   &::after {

@@ -326,7 +326,7 @@
         gap: var(--gap);
 
         a {
-          padding: 5px;
+          padding: 5px 15px 5px 5px;
 
           &::after {
             border-color: #fff !important;
@@ -576,13 +576,18 @@
         gap: 20px;
         align-items: flex-end;
         font-size: 1.5em;
-
+        @include screen('mobile') {
+          flex-wrap: wrap;
+        }
         span {
           font-size: 3em;
           font-weight: 100;
           display: block;
           line-height: 1;
           margin-bottom: -8px;
+          @include screen('xs_mobile') {
+            font-size: 2em;
+          }
         }
       }
 
