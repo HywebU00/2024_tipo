@@ -7683,26 +7683,6 @@ table thead th {
   padding: 0 10px;
 }
 
-.controlBox .slick-control {
-  font-size: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  margin-right: 10px;
-  border: none;
-}
-.controlBox .slick-control.slickPlay {
-  background: #5a53b4 url(../images/icon_pause.svg) center center no-repeat;
-  background-size: 20px;
-}
-.controlBox .slick-control.slickPause {
-  background: #5a53b4 url(../images/icon_play.svg) center center no-repeat;
-  background-size: 20px;
-}
-.controlBox .slick-control:hover {
-  background-color: #464094;
-}
-
 .function_panel {
   margin: 0.2em 0;
   padding: 0.5em 0 0.5em;
@@ -8550,9 +8530,10 @@ body.noscroll {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 2rem;
+  padding: 0 2rem;
   box-sizing: border-box;
   position: relative;
+  line-height: 1.5em;
   z-index: 1;
 }
 @media screen and (max-width: 991px) {
@@ -8573,6 +8554,7 @@ body.noscroll {
 .innerpage .innerBanner .bannerTitle::after {
   content: "";
   width: 40px;
+  min-width: 40px;
   height: 2px;
   display: block;
   background: #f43930;
@@ -10094,8 +10076,31 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   position: relative;
   isolation: isolate;
 }
+.mpBanner .outerBox .slick-control {
+  font-size: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin-right: 10px;
+  border: none;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 1;
+}
+.mpBanner .outerBox .slick-control.slickPlay {
+  background: #5a53b4 url(../images/icon_pause.svg) center center no-repeat;
+  background-size: 20px;
+}
+.mpBanner .outerBox .slick-control.slickPause {
+  background: #5a53b4 url(../images/icon_play.svg) center center no-repeat;
+  background-size: 20px;
+}
+.mpBanner .outerBox .slick-control:hover {
+  background-color: #464094;
+}
 .mpBanner .outerBox img {
-  height: 643px !important;
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -10109,17 +10114,12 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 236px;
+  left: 11%;
   width: 24px;
   height: 24px;
   background: url("../images/mp/tr5.png") no-repeat;
   display: block;
   z-index: 9;
-}
-@media screen and (max-width: 1200px) {
-  .mpBanner .outerBox::before {
-    left: 196px;
-  }
 }
 @media screen and (max-width: 991px) {
   .mpBanner .outerBox::before {
@@ -10129,18 +10129,13 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 .mpBanner .outerBox::after {
   content: "";
   position: absolute;
-  top: 390px;
+  bottom: 28%;
   left: 0px;
   width: 24px;
   height: 24px;
   background: url("../images/mp/tr6.png") no-repeat;
   display: block;
   z-index: 9;
-}
-@media screen and (max-width: 1200px) {
-  .mpBanner .outerBox::after {
-    top: 430px;
-  }
 }
 @media screen and (max-width: 991px) {
   .mpBanner .outerBox::after {
@@ -10154,19 +10149,11 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 .mpBanner .mpSlider {
   position: relative;
   padding-bottom: 0;
-}
-@media screen and (min-width: 1201px) {
-  .mpBanner .mpSlider {
-    -webkit-clip-path: polygon(0% 0%, calc(100% - 222px) 0%, 100% 215px, 100% calc(100% - 130px), calc(100% - 470px) calc(100% - 130px), calc(100% - 470px) 100%, 245px 100%, 0% 402px);
-            clip-path: polygon(0% 0%, calc(100% - 222px) 0%, 100% 215px, 100% calc(100% - 130px), calc(100% - 470px) calc(100% - 130px), calc(100% - 470px) 100%, 245px 100%, 0% 402px);
-    position: relative;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .mpBanner .mpSlider {
-    -webkit-clip-path: polygon(0% 0%, calc(100% - 152px) 0%, 100% 145px, 100% calc(100% - 100px), calc(100% - 290px) calc(100% - 100px), calc(100% - 290px) 100%, 205px 100%, 0% 442px);
-            clip-path: polygon(0% 0%, calc(100% - 152px) 0%, 100% 145px, 100% calc(100% - 100px), calc(100% - 290px) calc(100% - 100px), calc(100% - 290px) 100%, 205px 100%, 0% 442px);
-  }
+  -webkit-clip-path: polygon(0% 0%, 88% 0%, 100% 28%, 100% 84.45%, 72.14% 84.45%, 72.14% 100%, 11.92% 100%, 0% 68.75%);
+          clip-path: polygon(0% 0%, 88% 0%, 100% 28%, 100% 84.45%, 72.14% 84.45%, 72.14% 100%, 11.92% 100%, 0% 68.75%);
+  width: 100%;
+  aspect-ratio: 1720/643;
+  overflow: hidden;
 }
 @media screen and (max-width: 991px) {
   .mpBanner .mpSlider {
@@ -10178,7 +10165,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   content: "";
   position: absolute;
   top: 0;
-  right: 208px;
+  right: 10.68%;
   width: 24px;
   height: 24px;
   background: url("../images/mp/tr1.png") no-repeat;
@@ -10187,7 +10174,12 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 }
 @media screen and (max-width: 1440px) {
   .mpBanner .mpSlider::before {
-    right: 138px;
+    right: 10.5%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mpBanner .mpSlider::before {
+    right: 10.2%;
   }
 }
 @media screen and (max-width: 991px) {
@@ -10198,18 +10190,13 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 .mpBanner .mpSlider::after {
   content: "";
   position: absolute;
-  top: 201px;
+  top: 24.5%;
   right: 0;
   width: 24px;
   height: 24px;
   background: url("../images/mp/tr2.png") no-repeat;
   display: block;
   z-index: 9;
-}
-@media screen and (max-width: 1440px) {
-  .mpBanner .mpSlider::after {
-    top: 131px;
-  }
 }
 @media screen and (max-width: 991px) {
   .mpBanner .mpSlider::after {
@@ -10222,7 +10209,8 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 }
 .mpBanner .countBox {
   position: absolute;
-  bottom: 300px;
+  top: 50%;
+  transform: translateY(-50%);
   right: calc(100% + 5px);
   pointer-events: none;
 }
@@ -10330,8 +10318,8 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   border-radius: 20px;
 }
 .mpBanner .shareBox {
-  width: 477px;
-  height: 140px;
+  width: 28%;
+  height: 110px;
   position: absolute;
   right: 0;
   bottom: 0px;
@@ -10352,7 +10340,7 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 }
 .mpBanner .shareBox::before {
   content: "";
-  height: 219px;
+  height: 190px;
   width: 100%;
   display: block;
   position: absolute;
@@ -10424,7 +10412,13 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 .mpBanner .shareBox ul li a:hover, .mpBanner .shareBox ul li a:focus {
   transform: translateY(-4px);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1440px) {
+  .mpBanner .shareBox ul li a {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 1100px) {
   .mpBanner .shareBox ul li a {
     width: 40px;
     height: 40px;
@@ -10436,7 +10430,12 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 .mpBanner .shareBox ul li.fb a {
   background-position: 0px -66px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1440px) {
+  .mpBanner .shareBox ul li.fb a {
+    background-position: 0px -50px;
+  }
+}
+@media screen and (max-width: 1100px) {
   .mpBanner .shareBox ul li.fb a {
     background-position: 0px -40px;
   }
@@ -10444,7 +10443,12 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 .mpBanner .shareBox ul li.yt a {
   background-position: 0 -132px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1440px) {
+  .mpBanner .shareBox ul li.yt a {
+    background-position: 0px -100px;
+  }
+}
+@media screen and (max-width: 1100px) {
   .mpBanner .shareBox ul li.yt a {
     background-position: 0 -80px;
   }
@@ -10452,7 +10456,12 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 .mpBanner .shareBox ul li.rss a {
   background-position: 0 -198px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1440px) {
+  .mpBanner .shareBox ul li.rss a {
+    background-position: 0px -150px;
+  }
+}
+@media screen and (max-width: 1100px) {
   .mpBanner .shareBox ul li.rss a {
     background-position: 0 -120px;
   }
@@ -10460,7 +10469,12 @@ span.file_wmv a:hover, span.file_wmv a:focus {
 .mpBanner .shareBox ul li.flickr a {
   background-position: 0 -264px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1440px) {
+  .mpBanner .shareBox ul li.flickr a {
+    background-position: 0px -200px;
+  }
+}
+@media screen and (max-width: 1100px) {
   .mpBanner .shareBox ul li.flickr a {
     background-position: 0 -160px;
   }
@@ -10475,9 +10489,11 @@ span.file_wmv a:hover, span.file_wmv a:focus {
   color: #fff;
   right: 0px;
   top: 0;
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
   transform: perspective(1px) translateZ(0);
+  line-height: 1.5;
+  z-index: 1;
 }
 .mpBanner .faqBtn:before {
   content: "";
@@ -10503,13 +10519,18 @@ span.file_wmv a:hover, span.file_wmv a:focus {
     height: 70px;
   }
 }
+@media screen and (max-width: 1200px) {
+  .mpBanner .faqBtn {
+    width: 60px;
+    height: 60px;
+    font-size: 1rem;
+  }
+}
 @media screen and (max-width: 991px) {
   .mpBanner .faqBtn {
     font-size: 14px;
     line-height: 1.2;
     z-index: 9;
-    width: 60px;
-    height: 60px;
     right: 10px;
     top: 10px;
   }

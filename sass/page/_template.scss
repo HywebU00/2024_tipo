@@ -150,9 +150,10 @@ body {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      padding-right: 2rem;
+      padding: 0 2rem;
       box-sizing: border-box;
       position: relative;
+      line-height: 1.5em;
       z-index: 1;
       @include screen('tablet') {
         padding-right: 0;
@@ -168,6 +169,7 @@ body {
       &::after {
         content: '';
         width: 40px;
+        min-width: 40px;
         height: 2px;
         display: block;
         background: $importantColor;
