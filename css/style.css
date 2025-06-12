@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import '../vendor/fancyBox/fancybox.css';
+@import '../vendor/fancybox/fancybox.css';
 @import '../vendor/slick/slick.css';
 @import '../vendor/slick/slick-theme.css';
 .breadcrumb ul li:before {
