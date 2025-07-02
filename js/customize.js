@@ -412,11 +412,18 @@ $(document).ready(function () {
   function toggleContent(expand) {
     if (expand) {
       advSearchContent.slideDown().attr('hidden', false);
-      advSearchButton.addClass('active').attr('aria-expanded', 'true').text('關閉條件查詢'); // 切換按鈕文字
+
+      if(document.documentElement.lang === 'en')
+        advSearchButton.addClass('active').attr('aria-expanded', 'true').text('Hide query condictions'); // 切換按鈕文字
+      else
+        advSearchButton.addClass('active').attr('aria-expanded', 'true').text('關閉查詢條件'); // 切換按鈕文字
       // focusableElements.first().focus();
     } else {
       advSearchContent.slideUp().attr('hidden', true);
-      advSearchButton.removeClass('active').attr('aria-expanded', 'false').text('顯示條件查詢'); // 切換回原來的文字
+      if(document.documentElement.lang === 'en')
+        advSearchButton.removeClass('active').attr('aria-expanded', 'false').text('Show query condictions'); // 切換回原來的文字
+      else
+        advSearchButton.removeClass('active').attr('aria-expanded', 'false').text('顯示查詢條件'); // 切換回原來的文字
       advSearchButton.focus();
     }
   }
@@ -470,11 +477,17 @@ const focusableElements = advSearchContent.find('input, select, button, textarea
 function toggleContent(expand) {
   if (expand) {
     advSearchContent.slideDown().attr('hidden', false);
-    advSearchButton.addClass('active').attr('aria-expanded', 'true').text('關閉條件查詢'); // 切換按鈕文字
+    if(document.documentElement.lang === 'en')
+      advSearchButton.addClass('active').attr('aria-expanded', 'true').text('Hide query condictions'); // 切換按鈕文字
+    else
+      advSearchButton.addClass('active').attr('aria-expanded', 'true').text('關閉查詢條件'); // 切換按鈕文字
     // focusableElements.first().focus();
   } else {
     advSearchContent.slideUp().attr('hidden', true);
-    advSearchButton.removeClass('active').attr('aria-expanded', 'false').text('顯示條件查詢'); // 切換回原來的文字
+    if(document.documentElement.lang === 'en')
+      advSearchButton.removeClass('active').attr('aria-expanded', 'false').text('Show query condictions'); // 切換回原來的文字
+    else
+      advSearchButton.removeClass('active').attr('aria-expanded', 'false').text('顯示查詢條件'); // 切換回原來的文字
     advSearchButton.focus();
   }
 }
