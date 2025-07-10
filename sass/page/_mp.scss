@@ -788,7 +788,7 @@
 }
 
 .mpBanner {
-  padding: 0 50px;
+  padding: 0 50px 0 54px;
   position: relative;
 
   @include screen('tablet') {
@@ -989,7 +989,7 @@
 
       li {
         padding-bottom: 6px;
-        font-size: 1.25em;
+        font-size: 1.125em;
         text-align: center;
         position: relative;
         line-height: 1;
@@ -1013,7 +1013,7 @@
         }
 
         &.active {
-          font-size: 2.25em;
+          font-size: 2em;
           color: #5a53b4;
 
           @media screen and (max-width: 1440px) {
@@ -1274,19 +1274,18 @@
     @media screen and (max-width: 1440px) {
       width: 70px;
       height: 70px;
+      font-size: 1rem;
     }
 
     @media screen and (max-width: 1200px) {
       width: 60px;
       height: 60px;
-      font-size: 1rem;
+      font-size: 0.938rem;
     }
 
     @include screen('tablet') {
-      font-size: 14px;
       line-height: 1.2;
       z-index: 9;
-
       right: 10px;
       top: 10px;
     }
@@ -1562,6 +1561,9 @@
     max-width: $container-max;
     padding: 0 15px;
     margin: 0 auto 30px;
+    @media screen and (max-width: 1400px) {
+      padding: 0 30px;
+    }
   }
   .container {
     max-width: 100%;

@@ -36,6 +36,9 @@ body {
   padding: 0 15px;
   margin: 0 auto;
   max-width: $container-max; //請看_variable.scss
+  @media screen and (max-width: 1400px) {
+    padding: 0 30px;
+  }
 }
 
 .main {
